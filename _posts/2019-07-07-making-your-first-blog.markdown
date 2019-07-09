@@ -30,7 +30,7 @@ So, without further ado, I just opened my terminal and entered the first lines t
 I manipulated some commands, adding a sudo here and there (those were the dark times; used to sudo anytime the terminal said access denied)
 
 As you may expect,it didn’t work(I didn’t expect that though :P)
-And then started the not-very-likable task of finding what I did wrong started.
+And then started the not-very-likable task of finding what I did wrong.
 
 ### **Not so Likeable After All**
 
