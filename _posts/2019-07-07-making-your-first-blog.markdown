@@ -16,7 +16,7 @@ I am hosting this blog on [Github Pages][github-pages]. You can should read this
 
 ### **Always go step wise**
 
-So I was already behind the deadline I had set and was rushing to quickly set up a blog. I decided to use Jekyll for my github page as it is great for generating minimal stactic pages quickly.
+So I was already behind the deadline I had set and was rushing to quickly set up a blog. I decided to use Jekyll for my github page as it is great for generating minimal static pages quickly.
 Also, the [Jekyll themes][jekyll-themes] are really cool , you should check them out. 
 
 So, without further ado, I just opened my terminal and entered the first lines that were written on the jekyll homepage, telling I could set up Jekyll in few lines (very tempting indeed)
@@ -62,7 +62,7 @@ You can know more from the [Jekyll-docs][jekyll-docs]
 Keep in mind that the gem install command above works on the local directory.
 _I totally forgot that, as I had previously globally installed gem, which in NOT a good practice._
 
-And viola, took me more time due to my haste though.
+And voila, took me more time due to my haste though.
 
 Following are some things that may confuse you, make sure you follow them through, especially if you are a Linux user 
 
