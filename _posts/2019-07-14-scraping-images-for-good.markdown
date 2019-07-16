@@ -94,13 +94,15 @@ else:
 The response_list that was complete with all the relevant links, was then used to load the images and then store them in the images folder.
 
 ```python
-os.mkdir('./Blog-Images/')
+if 'Blog-Images' not in os.listdir('./'):
+    os.mkdir('./Blog-Images/')
+
 for link in response_list:
     img_name = link.split('/')
     for n in img_name :
         if 'jpg' in n or 'png' in n:
             name = n
-    value = urllib.request.urlretrieve(link, filename = './Blog-Images/'+ name)
+    urllib.request.urlretrieve(link, filename = './Blog-Images/'+ name)
 ```
 
 So, finally the entire script looked like this.
@@ -181,7 +183,9 @@ with open("./check.txt",'w') as file:
         file.write(l)
 
 ##Load the new images to the folder
-os.mkdir('./Blog-Images/')
+if 'Blog-Images' not in os.listdir('./'):
+    os.mkdir('./Blog-Images/')
+
 for link in response_list:
     img_name = link.split('/')
     for n in img_name :
