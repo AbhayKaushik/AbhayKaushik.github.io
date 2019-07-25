@@ -35,8 +35,6 @@ And so your journey of git magic manipulation begins. . .
 When you first create your magic book, it is empty. However, you can add new spells and other magic upon it. 
 The adding incantation makes the git magic track changes in your spells as well prepare them for engraving. 
 
-==Image of Git Book==
-
 You can see which all spells are being modified or are untracked, the commits so far, as well as the current branch, using this command:
 
 `git status`
@@ -107,8 +105,6 @@ Now, onto the next part. . .
 There can be multiple types of magic spells in a magic book. 
 However, instead of creating a new magic book for specialized spells of each type, we can use the same one again by a skill called branching.
 Branching is also used when you are experimenting on a spell improvement but don't want the current spell to break (think of it as the last page you use for rough work :P)
-
-==Image of Branching== 
 
 `git branch <branch-name>`
 
@@ -259,6 +255,7 @@ index 46e039b..469f750 100644
 +Flame!
 ```
 That's it for the overview! (you forgot it was an overview, didn't you? XD)
+
 Git Magic is much more vast and has lots of features for very specialized uses. 
 Keep learning and aim to be a better terminal wizard.
 
