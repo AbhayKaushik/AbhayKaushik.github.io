@@ -1,4 +1,4 @@
->The following is a made-up epilogue I have made to make learning git 
+>The following is a monologue I have made to make learning git 
 >a bit more interesting.
 >
 >Any resemblance to the some other story is purely coincidental.
