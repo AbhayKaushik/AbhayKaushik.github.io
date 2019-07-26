@@ -113,7 +113,7 @@ There can be multiple types of magic spells in a magic book.
 However, instead of creating a new magic book for specialized spells of each type, we can use the same one again by a skill called branching.
 Branching is also used when you are experimenting on a spell improvement but don't want the current spell to break (think of it as the last page you use for rough work :P)
 
-![alt text][branch-gif]
+![Branching][branch-gif]
 
 `git branch <branch-name>`
 
@@ -205,7 +205,7 @@ To update the organization book, you need to create another remote made by this 
 
 _Allow the user to create a remote called upstream to the repository mentioned in the url_
 
-![alt text][remote-img]
+![Image][remote-img]
 
 `git push origin master`
 
@@ -272,7 +272,7 @@ Keep learning and aim to be a better terminal wizard.
 
 [what-is-version-control]: https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
 [git-commit-link]: https://chris.beams.io/posts/git-commit/
-[branch-gif]: https://github.com/AbhayKaushik/AbhayKaushik.github.io/tree/master/images/git-branching.gif
-[remote-img]: https://github.com/AbhayKaushik/AbhayKaushik.github.io/tree/master/images/git-remote.png
+[branch-gif]: https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-branching.gif
+[remote-img]: https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-remote.png
 
 
