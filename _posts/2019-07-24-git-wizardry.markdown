@@ -40,13 +40,24 @@ And so your journey of git magic manipulation begins. . .
 ## Getting Started
 
 When you first create your magic book, it is empty. However, you can add new spells and other magic upon it. 
-The adding incantation makes the git magic track changes in your spells as well prepare them for engraving. 
+
+Your spellbook is just like any normal book. The pages at the back are treated as rough pages by almost everyone (except those who make an entire notebook as rough XD)
+
+![Git Repos][git-repos]
+
+The engravings are on the fair part of the spell book, which have the correct spells (people call it the local repo).
+While the rough part at the back is where you make small changes or add new stuff (people call it the working directory, as the real work is done there XP).
+ 
+The adding incantation makes the git magic track changes in your spells as well prepare them for engraving by moving them to staging area (a stage between working directory and repository), making your rough side empty (no need of eraser :))
+
+Now, copying from rough to fair is a time-consuming (and boring task :P). Git magic does that for you. 
+Just use the git commit incantation and all your work tracked by Git (present in staging area) is saved onto the fair side (local repo)  
 
 You can see which all spells are being modified or are untracked, the commits so far, as well as the current branch, using this command:
 
 `git status`
 
-_This incantation allows the user to see the status of the repository_
+_This incantation allows the user to see the status (of working directory and staging area) of the repository_
 
 With so much info provided by this incantation, this will be the spell most used by you. 
 
@@ -274,5 +285,5 @@ Keep learning and aim to be a better terminal wizard.
 [git-commit-link]: https://chris.beams.io/posts/git-commit/
 [branch-gif]: https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-branching.gif
 [remote-img]: https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-remote.png
-
+[git-repos]: https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-repos.png
 
