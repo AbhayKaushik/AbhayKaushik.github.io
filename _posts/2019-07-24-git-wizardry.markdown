@@ -9,7 +9,7 @@ categories: jekyll update
 >a bit more interesting.
 >
 >Any resemblance to the some other story is purely coincidental.
->None of the git commands have been abused during the making of this blog :P
+>None of the git commands have been abused during the making of this post :P
 
 >In case you may get confused:
 >
