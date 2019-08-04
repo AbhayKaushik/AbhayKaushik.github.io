@@ -26,11 +26,153 @@ Now, I will the run the script that I made earlier with some changes. Actually, 
 I tried wth .xml, but it doesn’t work everytime.
  
 Turns out, their xml and rss equivalents don’t have img tags, instead they have a description tag with the image details. 
-This won’t work with my script (The turnoff link is an exception as it has the img tag. I think these files are dependent upon the maintainers of these sites)
+This won’t work with my script. The turnoff link is an exception as it has the img tag. (These feeds are dependent upon the maintainers of these sites)
+
+So, currently my script looks like this:
 
 ```python
-#Code here
+#Import libraries
+import requests
+import urllib.request
+import time
+from bs4 import BeautifulSoup
+import os
+
+#Initial Things to Load each Time
+
+#Last Link list loaded
+check_list = []
+with open('/home/abhayk/Documents/Coding-Blocks-ML/check.txt', 'r') as file:
+    for row in file:
+        check_list.append(row.split('\n')[0])
+file.close()
+
+
+#List to store the last links obtained from each site
+last_link = []
+
+#list to store the responses
+response_list = []
+
+current_time = int(time.localtime()[1])*100+int(time.localtime()[2])
+#--Part 1: The Reddit Script--
+
+response = requests.get('https://www.reddit.com/r/comics/')
+tries = 0
+
+#Make multiple requests to busy server 
+while not response.ok and tries < 20:
+    time.sleep(1)
+    response = requests.get('https://www.reddit.com/r/comics/')
+    tries += 1
+    
+print("Response recieved")
+soup = BeautifulSoup(response.text, 'html.parser').findAll('img')
+for i in range(len(soup)-1,-1,-1):
+    tag = soup[i]
+    link = tag['src']
+    if 'external' in link or 'static' in link:
+        continue
+    n_link = link.split('?')[0].replace('preview','i')
+    if not n_link in check_list:
+        response_list.append((current_time, n_link))
+    else:
+        break
+        
+print("Part 1 successful")
+if len(response_list) != 0:
+    last_link.append(response_list[::-1][0][1])
+
+#--Part 2 : The Everything Else Script--
+
+#list of urls
+url_list = [
+    'https://turnoff.us/feed.xml',
+    'http://www.incidentalcomics.com/',
+    'https://xkcd.com/'
+    ]
+
+idx = 0
+for url in url_list: 
+    response = requests.get(url)
+    if(response.ok):
+        soup = BeautifulSoup(response.text, 'html.parser').findAll('img')
+        tag = soup[idx]
+        link = tag['src']
+        if idx < 1:
+            idx += 1
+        if not link.startswith('h'):
+            #Adding https in the start to create a valid link
+            link = 'https:' + str(link)
+        last_link.append(link)
+        if not link in check_list:
+            response_list.append((current_time,link))
+            
+
+#--Saving the last links to a file --
+
+#We will overwrite the file and enter new contents
+with open("/home/abhayk/Documents/Coding-Blocks-ML/check.txt",'w') as file:      
+    for l in last_link:
+        file.write(str(l) + "\n")
+
+print("Checks Updated")
+#Deleting file content older than 30 days
+
+older_than_days = 30
+#Check for older images and delete those links
+if os.stat("/home/abhayk/Documents/Coding-Blocks-ML/response.txt").st_size != 0 :
+    with open("/home/abhayk/Documents/Coding-Blocks-ML/response.txt",'r') as file:
+        storage = file.readlines()
+        #print("Storage:", storage)
+    with open("/home/abhayk/Documents/Coding-Blocks-ML/response.txt",'w') as file:    
+        for r in storage:
+            if current_time - int(r.split(',')[0].strip('(')) <= older_than_days:
+                file.write(r) #\n not added as previously added strings would already contain it
+            
+print("Response backlog deleted")
+#Add the new responses to the file
+with open("/home/abhayk/Documents/Coding-Blocks-ML/response.txt",'a') as file:      
+    for r in response_list:
+        #print("r in response list: ", r)
+        file.write(str(r) + "\n")
+        
+#Overwrite the new file with the links now in response_list:
+insert_list = []
+
+if os.stat("/home/abhayk/Documents/Coding-Blocks-ML/response.txt").st_size != 0 :
+    with open("/home/abhayk/Documents/Coding-Blocks-ML/response.txt",'r') as file:      
+        for l in file:
+            insert_list.append(l.split('\'')[1])
+
+
+insert_list.reverse()
+print("New response data added")
+#Add the links to image tags in the html page        
+with open('/home/abhayk/Documents/Coding-Blocks-ML/index.html','w') as page:
+    open_tags = "<html>\n<head>Meme Page</head>\n<body>\n<p>Hey! This is a page for some blogs that feature meme content.</p>\n"
+    css_code = "<style> img.resize{\nmax-width:50%;\nmax-height:50%;\n}\n </style>\n"
+    image_tags = ""
+    for link in insert_list:
+        image_tags += "<div><img style = 'max-width:800px;' src = '" + link + "'></div>\n"
+    end_tags = "</body>\n</html>"
+
+    code = open_tags + css_code + image_tags +end_tags
+    page.write(code)    
+
+print("HTML updated")
 ```
+Changes I made are:
+
+- Added the libraries to the script (I was developing in a jupyter, so I noticed it later :P)
+- Reversed the response list (old blogs were coming up on top.)
+
+    NOTE: I later realized that I was web scraping from reddit where posts were ordered according to their popularity, so it was bound to change. 
+    The fix : shift to new sorting instead of the popularity sorting!
+    ```python
+    response = requests.get('https://www.reddit.com/r/comics/new/')
+    ``` 
+- Added absolute paths to the file instead of relative paths (better safe than sorry :D)
 
 ## Chronic Cron
 
@@ -48,10 +190,11 @@ Now, I decided to add the cron job in my local computer. The only downside will 
 This is particularly not the case in my vacations but could be possible when my college starts.
 
 So, first I tried a simple cron job of inserting text in an empty file :
-
 ```shell
 20 17 * * * echo "This works" > /home/abhayk/Documents/Coding-Blocks-ML/img.txt 
 ```
+And it works :D
+
 I checked the syslog in /var/log/syslog and saw this among the lines:
 
 CRON[1321]: (abhayk) CMD (echo "This works" > /home/abhayk/Documents/Coding-Blocks-ML/img.txt )
@@ -59,14 +202,15 @@ CRON[1321]: (abhayk) CMD (echo "This works" > /home/abhayk/Documents/Coding-Bloc
 Now, I had to run a python script in my cron job.
 
 First, make sure that your python script is executable.
-
 ```
 chmod +x imagegrab.py
 ```
 
 After some more searching, I found that there some cron job handling in the form of locks maybe (yet to read), but it is somewhat difficult.
 
-And then I found just the thing, schedule library [link][schedule-link]
+And then I found just the thing, [python-crontab][python-crontab-link]
+
+I used this [blog][python-crontab-blog] to help setup my cron jobs using python-crontab
 
 The main advantange is that in case my computer is not on(working state), then it'll will wait until that is not the case and then initate the downloads.
 
@@ -82,12 +226,13 @@ And here we are at the end of this blog. (Or are we? XD)
 ## Not Content Without Bonus Content
 
 Now,I recently learnt to create a site in tor. 
-So, here’s the [link] for the same. 
+So, here’s the [link][onion-link] for the same (it can only be accessed using tor browser though :P) 
 It may not work always as it is self-hosted (currently), but hey! it can be whatever I want. 
 
 If you too want to make your own onion (especially if you have a server lying around), you can see this [blog][blog-link] by Kushal Das
 
-[cron-link] : https://a.com
-[schedule-link] :
-[onion-link]:
-[blog-link]:
+[cron-link]: https://www.adminschoice.com/crontab-quick-reference
+[python-crontab-link]:https://pypi.org/project/python-crontab/
+[python-crontab-blog]:https://stackabuse.com/scheduling-jobs-with-python-crontab/
+[onion-link]:http://www.4kwzfw7s2nh3viq3.onion/
+[blog-link]:https://kushaldas.in/posts/setting-up-authorized-v3-onion-services.html
