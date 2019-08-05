@@ -19,7 +19,7 @@ Cron is used to schedule jobs to run periodically at fixed times, dates, or inte
 
 You can learn more from this [link][cron-link]
 
-First I had thought of automating this process in a cloud vm, and host a site with periodically change the html file stored there.
+First I had thought of automating this process in a cloud VM, and host a site with periodically changing the html file stored there.
 However, it is diffcult to do without a billing account (I am not going to use credit cards just yet :D )
 
 I stumbled across many searches and methods and finally reached MongoDB along with Heroku. It may work but it'll take more time, so I will cover it in some other post.
@@ -174,10 +174,10 @@ print("HTML updated")
 ```
 Changes I made are:
 
-- Added the libraries to the script (I was developing in a jupyter, so I noticed it later :P)
+- Added the libraries to the script (I was developing in a Jupyter, so I noticed it later :P)
 - Reversed the response list (old blogs were coming up on top.)
 
-    NOTE: I later realized that I was web scraping from reddit where posts were ordered according to their popularity, so it was bound to change. 
+    NOTE: I later realized that I was web scraping from the reddit page where posts were ordered according to their popularity, so it was bound to change. 
     The fix : shift to new sorting instead of the popularity sorting!
     ```python
     response = requests.get('https://www.reddit.com/r/comics/new/')
@@ -217,7 +217,9 @@ And then I found just the thing, [python-crontab][python-crontab-link]
 I used this [blog][python-crontab-blog] to help setup my cron jobs using python-crontab
 
 After all this, the only problem left was to make sure that my laptop has an internet connection.
-Not entirely independent till now.But hey! It's an improvement. Atleast my script will run once a day in the morning (mostly without fail :P)
+Not entirely independent till now.
+
+But it's an improvement. Atleast my script will run once a day in the morning (mostly without fail :P)
 
 (Well the cron job is not working right now, so I will update the blog when I find a fix)
 
@@ -228,7 +230,7 @@ And here we are at the end of this blog. (Or are we? XD)
 Now,I recently learnt to create an onion service in Tor and have added the html file created by script to it.
 So, here’s the [link][onion-link] for the same if you want to see the images (it can only be accessed using tor browser though :P) 
 
-It may not work always as it is self-hosted (currently), but hey! it can be whatever I want. 
+It may not work always as it is self-hosted (currently), but it can be whatever I want. 
 
 If you too want to make your own onion service (especially if you have a server lying around :P), you can see this [blog][blog-link]
 
