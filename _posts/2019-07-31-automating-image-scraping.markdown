@@ -6,10 +6,10 @@ categories: jekyll update
 ---
 Yeah, this is the second part of image scraping blog. You see, even after making the script, I was not satisfied.
 
-First, I will have to execute the script every time I want to see the latest images (obviously..) but I may forget to run the script one morning (it’s really difficult to be regular)
+First, I will have to execute the script every time I want to see the latest images (obviously..) but I may forget to run the script one morning (it’s really difficult to be regular :P)
 
 Second, the sub-reddits that I have selected are very active and new posts keep popping up. 
-So, it’s quite possible that I may loose some of them if I don’t check on them regularly.
+So, it’s quite possible that I may lose some of them if I don’t check on them regularly.
 Reddit only loads the top posts according to preference and you have to scroll down to load more, which makes it difficult to scrape the entire page and you only get these top posts.
 
 Now, as you may have guessed, the answer to this : automation! So, I searched on how to automate scripts, and I stumbled across cron jobs.
@@ -19,14 +19,20 @@ Cron is used to schedule jobs to run periodically at fixed times, dates, or inte
 
 You can learn more from this [link][cron-link]
 
-First I had thought of automating this process in a cloud vm, and host a site with periodically change the html, but it is diffcult to do without a billing account (I am not going to use credit cards just yet :) )
-I stumbled across many searches and methods and finally reached mongodb along with heroku.But it'll take more time, so I will cover it in some other post.
+First I had thought of automating this process in a cloud vm, and host a site with periodically change the html file stored there.
+However, it is diffcult to do without a billing account (I am not going to use credit cards just yet :D )
+
+I stumbled across many searches and methods and finally reached MongoDB along with Heroku. It may work but it'll take more time, so I will cover it in some other post.
 
 Now, I will the run the script that I made earlier with some changes. Actually, I learnt later that you can access the rss feeds of a site by using .rss 
 I tried wth .xml, but it doesn’t work everytime.
  
-Turns out, their xml and rss equivalents don’t have img tags, instead they have a description tag with the image details. 
-This won’t work with my script. The turnoff link is an exception as it has the img tag. (These feeds are dependent upon the maintainers of these sites)
+Turns out, their xml and rss equivalents don’t have img tags, instead they have a description or content tag with the image details, like this: 
+```xml
+<content type="html"> ... &lt;span&gt;&lt;a href=&quot;https://i.imgur.com/V139kHFds.jpg&quot;&gt;[link]&lt;/a&gt;&lt;/span&gt; &amp;#32; &lt;span&gt;&lt;a href=&quot;https://www.reddit.com/r/comics/comments/cm9ludw/&quot; ... </content>
+```
+
+This won’t work with my script. The turnoff link is an exception as it has the img tag. (I think these feeds are dependent upon the maintainers of these sites)
 
 So, currently my script looks like this:
 
@@ -42,7 +48,7 @@ import os
 
 #Last Link list loaded
 check_list = []
-with open('/home/abhayk/Documents/Coding-Blocks-ML/check.txt', 'r') as file:
+with open('/home/abhayk/Documents/check.txt', 'r') as file:
     for row in file:
         check_list.append(row.split('\n')[0])
 file.close()
@@ -95,6 +101,10 @@ url_list = [
 idx = 0
 for url in url_list: 
     response = requests.get(url)
+
+idx = 0
+for url in url_list: 
+    response = requests.get(url)
     if(response.ok):
         soup = BeautifulSoup(response.text, 'html.parser').findAll('img')
         tag = soup[idx]
@@ -112,7 +122,7 @@ for url in url_list:
 #--Saving the last links to a file --
 
 #We will overwrite the file and enter new contents
-with open("/home/abhayk/Documents/Coding-Blocks-ML/check.txt",'w') as file:      
+with open("/home/abhayk/Documents/check.txt",'w') as file:      
     for l in last_link:
         file.write(str(l) + "\n")
 
@@ -121,18 +131,18 @@ print("Checks Updated")
 
 older_than_days = 30
 #Check for older images and delete those links
-if os.stat("/home/abhayk/Documents/Coding-Blocks-ML/response.txt").st_size != 0 :
-    with open("/home/abhayk/Documents/Coding-Blocks-ML/response.txt",'r') as file:
+if os.stat("/home/abhayk/Documents/response.txt").st_size != 0 :
+    with open("/home/abhayk/Documents/response.txt",'r') as file:
         storage = file.readlines()
         #print("Storage:", storage)
-    with open("/home/abhayk/Documents/Coding-Blocks-ML/response.txt",'w') as file:    
+    with open("/home/abhayk/Documents/response.txt",'w') as file:    
         for r in storage:
             if current_time - int(r.split(',')[0].strip('(')) <= older_than_days:
                 file.write(r) #\n not added as previously added strings would already contain it
             
 print("Response backlog deleted")
 #Add the new responses to the file
-with open("/home/abhayk/Documents/Coding-Blocks-ML/response.txt",'a') as file:      
+with open("/home/abhayk/Documents/response.txt",'a') as file:      
     for r in response_list:
         #print("r in response list: ", r)
         file.write(str(r) + "\n")
@@ -140,8 +150,8 @@ with open("/home/abhayk/Documents/Coding-Blocks-ML/response.txt",'a') as file:
 #Overwrite the new file with the links now in response_list:
 insert_list = []
 
-if os.stat("/home/abhayk/Documents/Coding-Blocks-ML/response.txt").st_size != 0 :
-    with open("/home/abhayk/Documents/Coding-Blocks-ML/response.txt",'r') as file:      
+if os.stat("/home/abhayk/Documents/response.txt").st_size != 0 :
+    with open("/home/abhayk/Documents/response.txt",'r') as file:      
         for l in file:
             insert_list.append(l.split('\'')[1])
 
@@ -149,7 +159,7 @@ if os.stat("/home/abhayk/Documents/Coding-Blocks-ML/response.txt").st_size != 0 
 insert_list.reverse()
 print("New response data added")
 #Add the links to image tags in the html page        
-with open('/home/abhayk/Documents/Coding-Blocks-ML/index.html','w') as page:
+with open('/home/abhayk/Documents/index.html','w') as page:
     open_tags = "<html>\n<head>Meme Page</head>\n<body>\n<p>Hey! This is a page for some blogs that feature meme content.</p>\n"
     css_code = "<style> img.resize{\nmax-width:50%;\nmax-height:50%;\n}\n </style>\n"
     image_tags = ""
@@ -173,63 +183,54 @@ Changes I made are:
     response = requests.get('https://www.reddit.com/r/comics/new/')
     ``` 
 - Added absolute paths to the file instead of relative paths (better safe than sorry :D)
+- Added os.stat condition so that I don't process an empty file
 
 ## Chronic Cron
 
-Chronic: continuing or occurring again and again for a long time 
-Cron: process or task that runs periodically on a Unix system
-Chronic Cron: process or task continuing or occurring again and again for a long time periodically on a Unix system
+Now, I had already seen crontab before learning about cloud schedulers, so I was wondering of I could write a cron job within my computer to excute the script. 
 
-Now, I had already seen crontab before learning about cloud schedulers, so I was wondering of I could write a cron job within my computer to excute the script.
- 
-Before I could try this, I stumbled across schedule (cron for humans) [library][schdule-link] and then decide to use that for my script. 
-
-So, again I modified my script (in development, you will always have to makes changes to imrprove, so you must not be afraid to do that. Though to tell the truth, I am pretty much frustated by myself considerng the number of changes I am making :| )
-
-Now, I decided to add the cron job in my local computer. The only downside will be that the process will be skipped if my computer is not on or I am not using it. 
-This is particularly not the case in my vacations but could be possible when my college starts.
+For that, I used crontab in my local computer. The only downside will be that the process will be skipped if my computer is not turned on. 
+This is particularly not the case in my vacations but could be possible when my college starts (this was for free time anyways :P) 
 
 So, first I tried a simple cron job of inserting text in an empty file :
 ```shell
-20 17 * * * echo "This works" > /home/abhayk/Documents/Coding-Blocks-ML/img.txt 
+20 17 * * * echo "This works" > /home/abhayk/Documents/img.txt 
 ```
 And it works :D
 
 I checked the syslog in /var/log/syslog and saw this among the lines:
+```bash
+$ grep CRON /var/log/syslog
 
-CRON[1321]: (abhayk) CMD (echo "This works" > /home/abhayk/Documents/Coding-Blocks-ML/img.txt )
-
+CRON[1321]: (abhayk) CMD (echo "This works" > /home/abhayk/Documents/img.txt )
+```
 Now, I had to run a python script in my cron job.
 
 First, make sure that your python script is executable.
-```
+```bash
 chmod +x imagegrab.py
 ```
-
-After some more searching, I found that there some cron job handling in the form of locks maybe (yet to read), but it is somewhat difficult.
+I was having some difficulties on how to handle python scripts as most of the examples were on bash scripts.
 
 And then I found just the thing, [python-crontab][python-crontab-link]
 
 I used this [blog][python-crontab-blog] to help setup my cron jobs using python-crontab
 
-The main advantange is that in case my computer is not on(working state), then it'll will wait until that is not the case and then initate the downloads.
+After all this, the only problem left was to make sure that my laptop has an internet connection.
+Not entirely independent till now.But hey! It's an improvement. Atleast my script will run once a day in the morning (mostly without fail :P)
 
-After all this, the only problem left is to make sure that my laptop stays connected to the net.
-Not entirely independent till now.But hey! It's an improvement.Atleast my script will run once a day in the morning (mostly without fail :P)
-
-So, I added my entire code to a single function and then my script (hopefully the final one), was something like this:
-
-== Insert Code ==
+(Well the cron job is not working right now, so I will update the blog when I find a fix)
 
 And here we are at the end of this blog. (Or are we? XD)
 
 ## Not Content Without Bonus Content
 
-Now,I recently learnt to create a site in tor. 
-So, here’s the [link][onion-link] for the same (it can only be accessed using tor browser though :P) 
+Now,I recently learnt to create an onion service in Tor and have added the html file created by script to it.
+So, here’s the [link][onion-link] for the same if you want to see the images (it can only be accessed using tor browser though :P) 
+
 It may not work always as it is self-hosted (currently), but hey! it can be whatever I want. 
 
-If you too want to make your own onion (especially if you have a server lying around), you can see this [blog][blog-link] by Kushal Das
+If you too want to make your own onion service (especially if you have a server lying around :P), you can see this [blog][blog-link]
 
 [cron-link]: https://www.adminschoice.com/crontab-quick-reference
 [python-crontab-link]:https://pypi.org/project/python-crontab/
