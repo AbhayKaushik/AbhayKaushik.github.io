@@ -4,7 +4,7 @@ title:  "Reading PYM book: Day 1"
 date:   2019-08-09 10:00:57 +0530
 categories: jekyll update
 ---
-Recently, I was suggested to read the book ["Python for you and me"][pym-book-link], for learning Python programming language.
+Recently, I was suggested to read the book [Python for you and me][pym-book-link], for learning Python programming language.
 
 Although I know a bit of Python, I thought it would be good to revise my fundamentals again.
 
@@ -44,7 +44,7 @@ Although I know a bit of Python, I thought it would be good to revise my fundame
   (In short, program loader calls the appropriate interpreter after seeing the she-bang :P )
  
 - # mu Editor
-   Also, I got to know about mu editor for python. (I only knew about IDLE :P) 
+   Also, I got to know about mu editor for python. (I only knew about IDLE) 
    
    mu is more beginner-friendly. 
 
@@ -57,10 +57,10 @@ Although I know a bit of Python, I thought it would be good to revise my fundame
    + Learnt about f-strings and why they were included from the talk mentioned in the book.
      The reason was that the previous method of formatting was error-prone, inflexible and cumbersome.  
 
-     We had .format, but code becomes longer, and we are repeating things. It will be cumbersome to make small changes, so then f-strings were introduced.
+     We had .format, but code was longer, and we were repeating things. It was cumbersome to make small changes, so then f-strings were introduced.
  
-     Just remove the .format part and then added 'f' before the string
-     (Too easy, isn't it? XD)
+     Just remove the .format part and then add 'f' before the string
+     (Too easy, isn't it? :D)
   
      Also learnt about PEP(Python Enhancement Proposal) from the talk.
      
@@ -70,9 +70,9 @@ Although I know a bit of Python, I thought it would be good to revise my fundame
 - # Operators and Expression 
    + An important and basic section. 
      Operators: _Arithmetic, Logical, Relational, Shorthand_ 
-     Expression: Collection of operators and operands (with seom parentheses along the way)
+     Expression: _Collection of operators and operands_ (with some parentheses along the way)
 
-   + Also mentioned type-conversion (we change type of a variable whose type you never declared :P)
+   + Also mentioned type-conversion (we change type of a variable whose type we never declare :P)
 
 [pym-book-link]: https://pymbook.readthedocs.io/en/latest/
 [repl-link]: https://pythonprogramminglanguage.com/repl/
