@@ -74,7 +74,7 @@ Although I know a bit of Python, I thought it would be good to revise my fundame
 
    + Also mentioned type-conversion (we change type of a variable whose type you never declared :P)
 
-[pym-book-link]: 
+[pym-book-link]: https://pymbook.readthedocs.io/en/latest/
 [repl-link]: https://pythonprogramminglanguage.com/repl/
 [github-pages]: https://pages.github.com/
 
