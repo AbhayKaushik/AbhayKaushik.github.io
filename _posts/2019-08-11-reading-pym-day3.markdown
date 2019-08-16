@@ -36,7 +36,9 @@ categories: jekyll update
      `if __name__ == '__main__':` had been a long lost doubt of mine. I finally understood why to use it.
      
      `__name__` is a Python variable that gets its value depending upon execution method of the script. It is set to `__main__` if it is executed as a script.
-     If it is imported as a module, it is set to the name of the script. I learnt about it from this [link][name-main-link]    
+     If it is imported as a module, it is set to the name of the script.
+     So basically, `if __name__ == '__main__':` is used to add code that will be executed in the script but not when used as a module.
+     I learnt about it from this [link][name-main-link]    
 
    - Local and Global variables.Unless declared, functions work on local variables. To make global variables, just use `global` keyword.
 
@@ -68,6 +70,8 @@ categories: jekyll update
      * a _allows appending on the file_
 
    - File handling is a tough business to handle in code.Make sure you take precautions, i.e., close files after their work is done, read and write on files of known size. Your main memory will thank you for it. In case the file is too big, just read it line by line :)
+
+   - Now to help you a bit in file handing, we have `open with ('filpath','mode') as filename:` method to the rescue. This ensures that the file closes in case you forget to.
 
 + # Error Handling
    Errors can come any time. While testing, and even after deployment. You must now how to handle errors.
