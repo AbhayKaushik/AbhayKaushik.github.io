@@ -12,12 +12,12 @@ Generally, changes are done to branches other than the master branch. Master bra
 If there is a topic branch relevant to your changes, then you should make a pull request on that branch. 
 
 In case there isn't any such branch, you can create a new one for the topic you want to address. 
-However, you must be the owner of the repository to make branches. Or, if the the repo belongs to an organization, you must be a member.
+However, you must be the owner of the repository to make branches. Or, if the the repo belongs to an organization, you must be a member.In essence, a person with write permissions
 
 If you are none of them, do not worry as then you can fork their repo instead of branching and then make changes to your fork.
 
 After forking, you can clone your repository in your local computer and make the changes that you wish to add.
-Make sure you read the contributing guidelines to understand how to make the changes.
+Make sure you read the contributing guidelines to understand how to submit the proposed changes.
 
 ```bash
 $ git clone forked-repo-url
@@ -28,7 +28,7 @@ $ git push
 
 Now that you have made the required changes to your fork, you are ready to make a pull request.
 
-To make the pull request, just click on the option and specify which branch you want to merge your changes into when you create your pull request. 
+To make the pull request, just specify which branch you want to merge your changes and click the pull request option. 
 ![Pull Request][pr-img]
 
 Add a message in the manner described in the contributing guidelines. If there is a pull request template, write the message accordingly. 
