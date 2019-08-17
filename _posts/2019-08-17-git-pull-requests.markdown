@@ -4,6 +4,12 @@ title:  "Creating a Pull Request"
 date:   2019-08-17 13:47:30 +0530
 categories: jekyll update
 ---
+In life, when you want to make changes to someone else's work, its proper to request.
+
+In git too, we have to make requests. 
+Be it the pull requests in Github or the merge requests in Gitlab, you need to make requests to propose changes to repositories you only have read access to. 
+
+_This blog writer assumes that you are working on Github. However, if you aren't , replacing 'pull request' with 'merge request' for Gitlab should do the trick_
 
 Pull requests are an essential part of contributing to Open Source.
 Any change that you wish to add to the public repo (not owned by you) can only be done by sending a pull request to the owner of the repository.
