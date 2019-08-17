@@ -30,6 +30,7 @@ Now that you have made the required changes to your fork, you are ready to make 
 
 To make the pull request, just click on the option and specify which branch you want to merge your changes into when you create your pull request. 
 ![Pull Request][pr-img]
+
 Add a message in the manner described in the contributing guidelines. If there is a pull request template, write the message accordingly. 
 
 Write the message and then send the pull request. Your pull request will now show up on the pull requests section of the repo you forked.
