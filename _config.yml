@@ -1,53 +1,26 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: A Novice's Nook
-email: abhay.gyanbharati@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A blog in which I write my experiences with learning new things
+# Permalinks
+# permalink:        pretty
+# relative_permalinks: true
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Abhay_Kaushik_
-github_username: AbhayKaushik
+# Setup
+title:            Novice's Nook
+tagline:          'A blog in which I write my experiences with learning new things'
+description:      'By <a href="https://twitter.com/Abhay_Kaushik_/" target="_blank">@Abhay_Kaushik_</a>'
+url:              http://abhaykaushik.github.io
+baseurl:          /
 
-# Build settings
-markdown: kramdown
-permalink: pretty
-theme: minima
-plugins:
-  - jekyll-feed
-  - jeykll-paginate
+author:
+  name:           'Abhay Kaushik'
+#  url:            https://twitter.com/Abhay_Kaushik_/
 
-paginate: 6
-paginate_path: "/page/:num"
+paginate:         5
 
-# SCSS
+# Custom vars
+# version:          2.1.0
 
-sass:
-  sass_dir: _scss
-  #style: compressed
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+github:
+  repo:           https://github.com/AbhayKaushik
