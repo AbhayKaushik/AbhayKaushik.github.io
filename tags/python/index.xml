@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>python on A Novice&#39;s Nook</title>
+    <link>/tags/python/</link>
+    <description>Recent content in python on A Novice&#39;s Nook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Fri, 16 Aug 2019 10:00:57 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reading PYM book: Day 3</title>
+      <link>/posts/2019-08-16-reading-pym-day3/</link>
+      <pubDate>Fri, 16 Aug 2019 10:00:57 +0530</pubDate>
+      
+      <guid>/posts/2019-08-16-reading-pym-day3/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;data-structures&#34;&gt;Data Structures&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lists were discussed in more detail.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lists were used as stack using the &lt;code&gt;pop()&lt;/code&gt; function and as queues using &lt;code&gt;pop(index)&lt;/code&gt; function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List comprehension: &lt;em&gt;concise way of creating lists&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tuples: &lt;em&gt;elements seperated by commas, enclosed within parentheses. Tuples are immutable.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I didn&amp;rsquo;t know that we could create a tuple with a single value by adding a trailing comma.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;a = (123,)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set: &lt;em&gt;data structure with no duplicate items, elements enclosed within curly braces.&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dictionaries: &lt;em&gt;unordered set of key-value pairs, where keys are unique. Enclosed by curly braces&lt;/em&gt;
+Mutable objects such as list, cannot be used as a key in dictionaries.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;enumerate()&lt;/code&gt; function for getting iteration number as well as the value when looping through a list. &lt;code&gt;zip()&lt;/code&gt; function for iterating through two sequences at the same time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;strings&#34;&gt;Strings&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Text in simple terms. Learnt that string literals alongside each other, behave like single string.&lt;/li&gt;
+&lt;li&gt;String object has many builtin methods. Some of ones I have used less often are:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;title()&lt;/code&gt; &lt;em&gt;which returns titlecased string&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isalnum()&lt;/code&gt; &lt;em&gt;for checking if the string has alphanumeric characters or not&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isalpha()&lt;/code&gt; &lt;em&gt;for checking if the string has alphabets or not&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lstrip(chars)&lt;/code&gt; &lt;em&gt;for removing characters from the left&lt;/em&gt; and &lt;code&gt;rstrip(chars)&lt;/code&gt; &lt;em&gt;for removing characters from the right&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;swapcase()&lt;/code&gt; &lt;em&gt;for swapping the cases in the string, uppercase to lowercase and vice-versa&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;functions&#34;&gt;Functions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Reusing a code that is required many times in a program.&lt;/p&gt;
+&lt;p&gt;Functions are defined using the &lt;code&gt;def&lt;/code&gt; keyword.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;if __name__ == &#39;__main__&#39;:&lt;/code&gt; had been a long lost doubt of mine. I finally understood why to use it.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;__name__&lt;/code&gt; is a Python variable that gets its value depending upon execution method of the script. It is set to &lt;code&gt;__main__&lt;/code&gt; if it is executed as a script.
+If it is imported as a module, it is set to the name of the script.
+So basically, &lt;code&gt;if __name__ == &#39;__main__&#39;:&lt;/code&gt; is used to add code that will be executed in the script but not when used as a module.
+I learnt about it from this &lt;a href=&#34;https://www.freecodecamp.org/news/whats-in-a-python-s-name-506262fe61e8/&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Local and Global variables.Unless declared, functions work on local variables. To make global variables, just use &lt;code&gt;global&lt;/code&gt; keyword.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Default argument values (in case the user refuses to give a value :P)&lt;/p&gt;
+&lt;p&gt;You cannot have arguments without default values after an argument has been given default values. (changing the order can resolve this problem if you don&amp;rsquo;t want to give a default value)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An interesting thing I learnt: if your default argument is an empty list (mutable object), things can wrong. It&amp;rsquo;s better to set list as None and then set to [] if it remains None.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learnt about keyword only argument, which forces the user to use correct keyword for each parameter.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arg&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All the other arguments are included in *.To input the specific argument, you will have to use the keyword. You can read more about this from &lt;a href=&#34;https://www.python.org/dev/peps/pep-3102/&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docstrings were also introduced in this section. I learnt about auto-documentation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Higher order functions were a new thing for me.They include functions that take one or more functions as arguments or return another function as output.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learnt about &lt;code&gt;map()&lt;/code&gt; function properly this time. It basically &amp;lsquo;maps&amp;rsquo; an iterator to a function, so each value of the iterator is passed to the function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;file-handling&#34;&gt;File Handling&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;As the name suggests, handling files, which involves opening,reading, writing and closing files.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;open()&lt;/code&gt; function is used to open files.It takes two arguments, the filepath and the mode in which it needs to be opened.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Some of the reading modes are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;r &lt;em&gt;read-only mode&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;w &lt;em&gt;allows writing on file&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;a &lt;em&gt;allows appending on the file&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;File handling is a tough business to handle in code.Make sure you take precautions, i.e., close files after their work is done, read and write on files of known size. Your main memory will thank you for it. In case the file is too big, just read it line by line :)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now to help you a bit in file handing, we have &lt;code&gt;open with (&#39;filpath&#39;,&#39;mode&#39;) as filename:&lt;/code&gt; method to the rescue. This ensures that the file closes in case you forget to.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;error-handling&#34;&gt;Error Handling&lt;/h1&gt;
+&lt;p&gt;Errors can come any time. While testing, and even after deployment. You must now how to handle errors.
+Some of the errors that we see most of the time are NameError and TypeError. (happens to newbies all the time :P)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NameError: literal sense - error in name.
+Happens when python doesn&amp;rsquo;t understand a name. Generally this error occurs when we misspell a variable name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TypeError: literal sense - error in type.
+This error happens when type is wrong, i.e. the datatype you are performing the operation on is incompatible for it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With bugs crashing the programs (and all hope for peace of mind :P), your only hope is try-except blocks.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# code statments that may lead to an error&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;except&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# code statements that run in case an error does take place&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Code in the try block just runs like a normal code. If in case, an error is encountered, control goes to except block, which then runs code for handling errors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Reading PYM book: Day 2</title>
+      <link>/posts/2019-08-13-reading-pym-day2/</link>
+      <pubDate>Tue, 13 Aug 2019 10:10:57 +0530</pubDate>
+      
+      <guid>/posts/2019-08-13-reading-pym-day2/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;if-else&#34;&gt;if-else&lt;/h1&gt;
+&lt;p&gt;Want to give your program the power of decision-making?
+Just add if-else statements to the code.&lt;/p&gt;
+&lt;p&gt;This is where the identation practices come into play. (Wrong output despite the if-else statement can frustate you :P)&lt;/p&gt;
+&lt;p&gt;if-else can be nested and can also be extended by elif statements (if you have more than 2 choices)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Truth value testing:
+Another good practice&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# code statements&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and not &lt;code&gt;x == True:&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I have made this mistake many times.&lt;/p&gt;
+&lt;p&gt;The reason you shouldn&amp;rsquo;t do this is that every single object in Python can be evaluated to True or False.
+The PEP 8 Style Guide recommends against comparing a value to True or False as it is less readable and will frequently return an unexpected Boolean.
+(I found the reason with the help of this &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/understanding-boolean-logic-in-python-3&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;looping&#34;&gt;Looping&lt;/h1&gt;
+&lt;p&gt;Want the program do to a task repeatedly?
+Loop the task instead of writing it multiple times&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;lists&#34;&gt;Lists&lt;/h1&gt;
+&lt;p&gt;A data structure. Implemented using square brackets.
+You can use slicing to access specific elements of list: &lt;code&gt;list[start:stop-before:step]&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learnt about range() function from a new perspective. Did not realize earlier that it was a generator function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Reading PYM book: Day 1</title>
+      <link>/posts/2019-08-12-reading-pym-day1/</link>
+      <pubDate>Mon, 12 Aug 2019 10:00:57 +0530</pubDate>
+      
+      <guid>/posts/2019-08-12-reading-pym-day1/</guid>
+      <description>&lt;p&gt;Recently, I was suggested to read the book &lt;a href=&#34;https://pymbook.readthedocs.io/en/latest/&#34;target=&#34;_blank&#34;&gt;Python for you and me&lt;/a&gt;, for learning Python programming language.&lt;/p&gt;
+&lt;p&gt;Although I know a bit of Python, I thought it would be good to revise my fundamentals again.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;beginning-section&#34;&gt;Beginning Section&lt;/h1&gt;
+&lt;p&gt;The beginning section was really good. It mentions about :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python Interpreter : &lt;em&gt;The interpreter which can access the code&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Whitespaces and Indentation : &lt;em&gt;How to handle spaces while writing code&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Source Files : &lt;em&gt;making py files executable&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Comments : &lt;em&gt;writing comments to remember why you did this&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Modules : &lt;em&gt;stuff made by others that you can use for free&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I liked the fact that best practices are mentioned alongside programming concepts.
+Some new best practices I learnt were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One blank line between functions.&lt;/li&gt;
+&lt;li&gt;Two blank lines between classes.&lt;/li&gt;
+&lt;li&gt;Add a space after “,” in dicts, lists, tuples, and argument lists and after “:” in dicts.&lt;/li&gt;
+&lt;li&gt;Spaces around assignments and comparisons (except in argument list)&lt;/li&gt;
+&lt;li&gt;No spaces just inside parentheses.&lt;/li&gt;
+&lt;li&gt;Add a space after the # in comments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Though most of them won&amp;rsquo;t give errors if you don&amp;rsquo;t follow them. However, they &lt;code&gt;increase code readability&lt;/code&gt; and make it &lt;code&gt;easier to correct any errors&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Also,  one basic thing that I learnt just some days before reading the book was making the a .py file executable.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ chmod +x helloworld.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;One raging doubt I had was how does the compiler gets to know about she-bang,
+&lt;code&gt;#!/usr/env/bin python&lt;/code&gt; as # used for comments in python.
+After some more study, I realized that I was thinking all wrong, the python interpreter comes into picture after the she-bang part.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In Unix-like operating systems, when a text file with a shebang is used as if it is an executable, the program loader mechanism parses the rest of the file&amp;rsquo;s initial line as an interpreter directive.
+The loader executes the specified interpreter program, passing to it as an argument the path that was initially used when attempting to run the script, so that the program may use the file as input data.&lt;/p&gt;
+&lt;p&gt;~ Wikipedia&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(In short, program loader calls the appropriate interpreter after seeing the she-bang :P )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;mu-editor&#34;&gt;mu Editor&lt;/h1&gt;
+&lt;p&gt;Also, I got to know about mu editor for python. (I only knew about IDLE)&lt;/p&gt;
+&lt;p&gt;mu is more beginner-friendly.&lt;/p&gt;
+&lt;p&gt;Learnt about REPL (read-evaluate-print-loop). It basically means reading user input, evaluating it, printing the result and then repeat these 3 steps.
+You can know more about them from &lt;a href=&#34;https://pythonprogramminglanguage.com/repl/&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It basically refers to the shell you run by typing python in the terminal. Used it many times but didn&amp;rsquo;t know about REPL.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;variables-and-datatypes&#34;&gt;Variables and Datatypes&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Learnt about f-strings and why they were included from the talk mentioned in the book.
+The reason was that the previous method of formatting was error-prone, inflexible and cumbersome.&lt;/p&gt;
+&lt;p&gt;We had .format, but code was longer, and we were repeating things. It was cumbersome to make small changes, so then f-strings were introduced.&lt;/p&gt;
+&lt;p&gt;Just remove the .format part and then add &amp;lsquo;f&amp;rsquo; before the string
+(Too easy, isn&amp;rsquo;t it? :D)&lt;/p&gt;
+&lt;p&gt;Also learnt about PEP(Python Enhancement Proposal) from the talk.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learnt about tuple packing and unpacking. I had used them but didn&amp;rsquo;t intuitively associate them with tuples.
+I found myself using unpacking more often after reading that (Baader-Meinhof phenomenon maybe :P)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;operators-and-expression&#34;&gt;Operators and Expression&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;An important and basic section.
+Operators: &lt;em&gt;Arithmetic, Logical, Relational, Shorthand&lt;/em&gt;
+Expression: &lt;em&gt;Collection of operators and operands&lt;/em&gt; (with some parentheses along the way)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Also mentioned type-conversion (we change type of a variable whose type we never declare :P)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

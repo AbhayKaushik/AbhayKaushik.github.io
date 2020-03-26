@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Reading PYM book: Day 1&nbsp;&ndash;&nbsp;A Novice&#39;s Nook</title><link rel="stylesheet" href="/css/core.min.851f5181448e7e5e2219717b346282751186a92327b3dda2d30c3d7116596593cc943005e2ba64b04182b458c20b9e04.css" integrity="sha384-hR9RgUSOfl4iGXF7NGKCdRGGqSMns92i0ww9cRZZZZPMlDAF4rpksEGCtFjCC54E"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">A Novice's Nook</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">My experiences with learning new things</span></div></section><div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Reading PYM book: Day 1</h1><p class="article date">Monday, August 12, 2019</p></section><article class="article markdown-body"><p>Recently, I was suggested to read the book <a href="https://pymbook.readthedocs.io/en/latest/"target="_blank">Python for you and me</a>, for learning Python programming language.</p>
+<p>Although I know a bit of Python, I thought it would be good to revise my fundamentals again.</p>
+<ul>
+<li>
+<h1 id="beginning-section">Beginning Section</h1>
+<p>The beginning section was really good. It mentions about :</p>
+<ul>
+<li>Python Interpreter : <em>The interpreter which can access the code</em></li>
+<li>Whitespaces and Indentation : <em>How to handle spaces while writing code</em></li>
+<li>Source Files : <em>making py files executable</em></li>
+<li>Comments : <em>writing comments to remember why you did this</em></li>
+<li>Modules : <em>stuff made by others that you can use for free</em></li>
+</ul>
+<p>I liked the fact that best practices are mentioned alongside programming concepts.
+Some new best practices I learnt were:</p>
+<ul>
+<li>One blank line between functions.</li>
+<li>Two blank lines between classes.</li>
+<li>Add a space after “,” in dicts, lists, tuples, and argument lists and after “:” in dicts.</li>
+<li>Spaces around assignments and comparisons (except in argument list)</li>
+<li>No spaces just inside parentheses.</li>
+<li>Add a space after the # in comments</li>
+</ul>
+<p>Though most of them won&rsquo;t give errors if you don&rsquo;t follow them. However, they <code>increase code readability</code> and make it <code>easier to correct any errors</code>.</p>
+<p>Also,  one basic thing that I learnt just some days before reading the book was making the a .py file executable.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ chmod +x helloworld.py
+</code></pre></div><p>One raging doubt I had was how does the compiler gets to know about she-bang,
+<code>#!/usr/env/bin python</code> as # used for comments in python.
+After some more study, I realized that I was thinking all wrong, the python interpreter comes into picture after the she-bang part.</p>
+<blockquote>
+<p>In Unix-like operating systems, when a text file with a shebang is used as if it is an executable, the program loader mechanism parses the rest of the file&rsquo;s initial line as an interpreter directive.
+The loader executes the specified interpreter program, passing to it as an argument the path that was initially used when attempting to run the script, so that the program may use the file as input data.</p>
+<p>~ Wikipedia</p>
+</blockquote>
+<p>(In short, program loader calls the appropriate interpreter after seeing the she-bang :P )</p>
+</li>
+<li>
+<h1 id="mu-editor">mu Editor</h1>
+<p>Also, I got to know about mu editor for python. (I only knew about IDLE)</p>
+<p>mu is more beginner-friendly.</p>
+<p>Learnt about REPL (read-evaluate-print-loop). It basically means reading user input, evaluating it, printing the result and then repeat these 3 steps.
+You can know more about them from <a href="https://pythonprogramminglanguage.com/repl/"target="_blank">here</a></p>
+<p>It basically refers to the shell you run by typing python in the terminal. Used it many times but didn&rsquo;t know about REPL.</p>
+</li>
+<li>
+<h1 id="variables-and-datatypes">Variables and Datatypes</h1>
+<ul>
+<li>
+<p>Learnt about f-strings and why they were included from the talk mentioned in the book.
+The reason was that the previous method of formatting was error-prone, inflexible and cumbersome.</p>
+<p>We had .format, but code was longer, and we were repeating things. It was cumbersome to make small changes, so then f-strings were introduced.</p>
+<p>Just remove the .format part and then add &lsquo;f&rsquo; before the string
+(Too easy, isn&rsquo;t it? :D)</p>
+<p>Also learnt about PEP(Python Enhancement Proposal) from the talk.</p>
+</li>
+<li>
+<p>Learnt about tuple packing and unpacking. I had used them but didn&rsquo;t intuitively associate them with tuples.
+I found myself using unpacking more often after reading that (Baader-Meinhof phenomenon maybe :P)</p>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="operators-and-expression">Operators and Expression</h1>
+<ul>
+<li>
+<p>An important and basic section.
+Operators: <em>Arithmetic, Logical, Relational, Shorthand</em>
+Expression: <em>Collection of operators and operands</em> (with some parentheses along the way)</p>
+</li>
+<li>
+<p>Also mentioned type-conversion (we change type of a variable whose type we never declare :P)</p>
+</li>
+</ul>
+</li>
+</ul></article><section class="article labels"><a class="tag" href=/tags/python/>python</a></section></div><section class="article navigation"><p><a class="link" href="/posts/2019-08-13-reading-pym-day2/"><span class="li">&larr;</span>Reading PYM book: Day 2</a></p><p><a class="link" href="/posts/2019-07-31-automating-image-scraping/"><span class="li">&rarr;</span>Automating Image Scraping</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></div>
+</body>
+
+</html>

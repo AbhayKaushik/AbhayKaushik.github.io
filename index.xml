@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>A Novice&#39;s Nook</title>
+    <link>/</link>
+    <description>Recent content on A Novice&#39;s Nook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Posts</title>
+      <link>/posts/</link>
+      <pubDate>Sat, 17 Aug 2019 13:47:30 +0530</pubDate>
+      
+      <guid>/posts/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>&lt;p&gt;I am Abhay Kaushik, currently a CSE 3rd year undergraduate student at BVCOE, New Delhi and the Tech head of Developer Student Club within the campus. An avid learner and a tabla player, I tend to ponder a lot over small day-to-day tasks.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

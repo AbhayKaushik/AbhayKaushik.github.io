@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Scraping Images for Good&nbsp;&ndash;&nbsp;A Novice&#39;s Nook</title><link rel="stylesheet" href="/css/core.min.851f5181448e7e5e2219717b346282751186a92327b3dda2d30c3d7116596593cc943005e2ba64b04182b458c20b9e04.css" integrity="sha384-hR9RgUSOfl4iGXF7NGKCdRGGqSMns92i0ww9cRZZZZPMlDAF4rpksEGCtFjCC54E"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">A Novice's Nook</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">My experiences with learning new things</span></div></section><div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Scraping Images for Good</h1><p class="article date">Sunday, July 14, 2019</p></section><article class="article markdown-body"><p>So, in #dgplug training, someone shared a blog on <a href="https://turnoff.us"target="_blank">depressed-developers</a>. After that, we were suggested to try writing a script to retrieve the latest images that were published on the site.</p>
+<p>I realised after searching for a while that what I wish to do is actually web scraping (web scraping was on my lists of things to learn, as I thought it would be very difficult)</p>
+<p>I read some more links, got to know about <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"target="_blank">Beautiful Soup</a> library and then wrote my script using it.The script is something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://turnoff.us/feed.xml&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">link</span> <span class="o">=</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">]</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;alt&#39;</span><span class="p">]</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">())</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;./turnoff_Images/&#39;</span><span class="p">)</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;./turnoff_Images/&#39;</span><span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;.png&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Latest Image :&#34;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&#34; saved in turnoff_Images folder&#34;</span><span class="p">)</span>
+</code></pre></div><p>I did take help from this <a href="https://towardsdatascience.com/how-to-web-scrape-with-python-in-4-minutes-bc49186a8460"target="_blank">link</a> though.</p>
+<p>I was glad of this achievement.I learnt by myself, a thing which I thought was too tough to understand alone.
+Now, this took me around 2 hrs until I posted the link to code on the channel. (yeah I know that’s too much time; I spent 30 mins procrastinating on how to send a proper message on the IRC)</p>
+<p>Later, I started thinking on how I could make this into a project or hack to make my life easier.
+And then the light bulb moment! I realised that I am lot into memes and art. Instead of scrolling through social media, (which seriously makes time disappear :| ) I decided to look where these memes are made. Turns out, some of the popular ones have a blog of their own.</p>
+<p>Also, I wanted to check the sub-reddits on comic and unix-setups (ahem ahem, I think you got it XD).</p>
+<p>So now I got a list of urls that have regular content on their sites. As I don’t need the related text,the RSS reader felt a bit overkill to me.
+I decided to modify my python script and run it to get the new images from all these blogs.</p>
+<h3 id="scaling-things-up"><strong>Scaling Things Up</strong></h3>
+<p>Now, each of the blog was different so I studied the source HTML of each blog to see how the image I need can be extracted.</p>
+<p>Sometimes, required images were not the within the first image tag of the page, as there were other images such as the logo and advertisements.
+The good thing was that the source of these ads and logo had common substrings, which could be used to differentiate to get the required images.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">link</span> <span class="o">=</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="s1">&#39;external&#39;</span> <span class="ow">in</span> <span class="n">link</span> <span class="ow">or</span> <span class="s1">&#39;static&#39;</span> <span class="ow">in</span> <span class="n">link</span><span class="p">:</span>
+    <span class="k">continue</span>
+</code></pre></div><p>Also, sometimes the server was busy and I used to get a response <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"target="_blank">429</a>.To tackle that, I pinged the server multiple times with some pause(multiple requests without a break can get you flagged by the server, preventing you from getting any more requests through)</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.reddit.com/r/comics/&#39;</span><span class="p">)</span>
+<span class="n">tries</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">#Make multiple requests to busy server </span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">response</span><span class="o">.</span><span class="n">ok</span> <span class="ow">and</span> <span class="n">tries</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.reddit.com/r/comics/&#39;</span><span class="p">)</span>
+    <span class="n">tries</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div><p>Now, the only thing left was to make sure that I don’t get duplicate images.For that, I maintained a check.txt which stored the last links that were processed upon in the previous run.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Saving the last links to a file</span>
+<span class="c1">#We will overwrite the file and enter new contents</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;./check.txt&#34;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span> 
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">last_link</span><span class="p">:</span>
+        <span class="nb">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</code></pre></div><p>The contents of the file were then loaded and each string when processed, was checked if it was present in the last links. As the most recent images are on the top, so after getting an old image link match, the processing was stopped. This is because all the images below would already have been processed in the previous run.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">n_link</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;preview&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">n_link</span> <span class="ow">in</span> <span class="n">check_list</span><span class="p">:</span>
+    <span class="n">response_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n_link</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">break</span>
+</code></pre></div><p>The response_list that was complete with all the relevant links, was then used to load the images and then store them in the images folder.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">if</span> <span class="s1">&#39;Blog-Images&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;./Blog-Images/&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">response_list</span><span class="p">:</span>
+    <span class="n">img_name</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">img_name</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;jpg&#39;</span> <span class="ow">in</span> <span class="n">n</span> <span class="ow">or</span> <span class="s1">&#39;png&#39;</span> <span class="ow">in</span> <span class="n">n</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;./Blog-Images/&#39;</span><span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div><p>So, finally the entire script looked like this.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Initial Things to Load each Time</span>
+<span class="n">last_link</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">#Last Link list loaded</span>
+<span class="n">check_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./check.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvFile</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvFile</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">link</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        <span class="n">check_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+<span class="n">csvFile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1">#list to store the responses</span>
+<span class="n">response_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">#--Part 1: The Reddit Script--</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.reddit.com/r/comics/&#39;</span><span class="p">)</span>
+<span class="n">tries</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">#Make multiple requests to busy server </span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">response</span><span class="o">.</span><span class="n">ok</span> <span class="ow">and</span> <span class="n">tries</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://www.reddit.com/r/comics/&#39;</span><span class="p">)</span>
+    <span class="n">tries</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;Response recieved&#34;</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">soup</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">link</span> <span class="o">=</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="s1">&#39;external&#39;</span> <span class="ow">in</span> <span class="n">link</span> <span class="ow">or</span> <span class="s1">&#39;static&#39;</span> <span class="ow">in</span> <span class="n">link</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">n_link</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;?&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;preview&#39;</span><span class="p">,</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">n_link</span> <span class="ow">in</span> <span class="n">check_list</span><span class="p">:</span>
+        <span class="n">response_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n_link</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">break</span>
+        
+<span class="k">print</span><span class="p">(</span><span class="n">response_list</span><span class="p">)</span>
+<span class="n">last_link</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">response_list</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1">#--Part 2 : The Everything Else Script--</span>
+
+<span class="c1">#list of urls</span>
+<span class="n">url_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;https://turnoff.us/feed.xml&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;http://www.incidentalcomics.com/&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;https://xkcd.com/&#39;</span>
+    <span class="p">]</span>
+
+<span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">url_list</span><span class="p">:</span> 
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">ok</span><span class="p">):</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">)</span>
+        <span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="n">link</span> <span class="o">=</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">]</span>
+        <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">link</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">):</span>
+            <span class="c1">#Adding https in the start to create a valid link</span>
+            <span class="n">link</span> <span class="o">=</span> <span class="s1">&#39;https:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+        <span class="n">last_link</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">check_list</span><span class="p">:</span>
+            <span class="n">response_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+            
+
+<span class="c1">#--Saving the last links to a file --</span>
+
+<span class="c1">#We will overwrite the file and enter new contents</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;./check.txt&#34;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">last_link</span><span class="p">:</span>
+        <span class="nb">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+
+<span class="c1">##Load the new images to the folder</span>
+<span class="k">if</span> <span class="s1">&#39;Blog-Images&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;./Blog-Images/&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">response_list</span><span class="p">:</span>
+    <span class="n">img_name</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">img_name</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;jpg&#39;</span> <span class="ow">in</span> <span class="n">n</span> <span class="ow">or</span> <span class="s1">&#39;png&#39;</span> <span class="ow">in</span> <span class="n">n</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;./Blog-Images/&#39;</span><span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+</code></pre></div><p>Off to see the new images my script grabs.See you next week!</p></article><section class="article labels"><a class="category" href=/categories/automation/>automation</a><a class="tag" href=/tags/web-scraping/>web-scraping</a></section></div><section class="article navigation"><p><a class="link" href="/posts/2019-07-24-git-wizardry/"><span class="li">&larr;</span>Git Wizardry</a></p><p><a class="link" href="/posts/2019-07-07-making-your-first-blog/"><span class="li">&rarr;</span>Making your first blog</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></div>
+</body>
+
+</html>

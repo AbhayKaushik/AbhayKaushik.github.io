@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>jekyll on A Novice&#39;s Nook</title>
+    <link>/tags/jekyll/</link>
+    <description>Recent content in jekyll on A Novice&#39;s Nook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Sun, 07 Jul 2019 10:08:57 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making your first blog</title>
+      <link>/posts/2019-07-07-making-your-first-blog/</link>
+      <pubDate>Sun, 07 Jul 2019 10:08:57 +0530</pubDate>
+      
+      <guid>/posts/2019-07-07-making-your-first-blog/</guid>
+      <description>&lt;p&gt;So here is my first blog. It is more of my experience than it is a step by step guide so &lt;strong&gt;do read before pasting the commands in your terminal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Reading and writing are very important and have been a integral part of gaining understanding for a long time.
+The best way to conform and absorb what you have read is to write about it.In these times, writing a blog can be just that.&lt;/p&gt;
+&lt;p&gt;The task of writing your first blog is indeed a difficult thing. Then again, taking the first step for anything worthwhile has always been tough.&lt;/p&gt;
+&lt;p&gt;I am hosting this blog on &lt;a href=&#34;https://pages.github.com/&#34;target=&#34;_blank&#34;&gt;Github Pages&lt;/a&gt;. You can should read this blog if you are new to blogging, may it help you&lt;/p&gt;
+&lt;h3 id=&#34;always-go-step-wise&#34;&gt;&lt;strong&gt;Always go step wise&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;So I was already behind the deadline I had set and was rushing to quickly set up a blog. I decided to use Jekyll for my github page as it is great for generating minimal static pages quickly.
+Also, the &lt;a href=&#34;https://jekyllthemes.io&#34;target=&#34;_blank&#34;&gt;Jekyll themes&lt;/a&gt; are really cool , you should check them out.&lt;/p&gt;
+&lt;p&gt;So, without further ado, I just opened my terminal and entered the first lines that were written on the jekyll homepage, telling I could set up Jekyll in few lines (very tempting indeed)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;~ $ gem install bundler jekyll
+~ $ jekyll new my-awesome-site
+~ $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-awesome-site
+~/my-awesome-site $ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I manipulated some commands, adding a sudo here and there (those were the dark times; used to sudo anytime the terminal said access denied)&lt;/p&gt;
+&lt;p&gt;As you may expect,it didn’t work(I didn’t expect that though :P)
+And then started the not-very-likable task of finding what I did wrong.&lt;/p&gt;
+&lt;h3 id=&#34;not-so-likeable-after-all&#34;&gt;&lt;strong&gt;Not so Likeable After All&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;I explore and see the homepage a bit more, and lo, there was an Installation link.
+I opened it, looked setting up in Linux distros, and realized that I didn’t have any Ruby environment to begin with.
+Jekyll was written in Ruby, know more about it and some other terms &lt;a href=&#34;https://jekyllrb.com/docs/ruby-101/&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The steps are as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt-get install ruby-full build-essential zlib1g-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39; Install Ruby Gems to ~/gems&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export GEM_HOME=&amp;#34;$HOME/gems&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=&amp;#34;$HOME/gems/bin:$PATH&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;somedirectory $ gem install jekyll bundler
+somedirectory $ jekyll new my-blog-name
+somedirectory $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-blog-name
+somedirectory/myblog $ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Where somedirectory can be any directory&lt;/p&gt;
+&lt;p&gt;You can know more from the &lt;a href=&#34;https://jekyllrb.com/docs/home&#34;target=&#34;_blank&#34;&gt;Jekyll-docs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Keep in mind that the gem install command above works on the local directory.
+&lt;em&gt;I totally forgot that, as I had previously globally installed gem, which in NOT a good practice.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;And voila, took me more time due to my haste though.&lt;/p&gt;
+&lt;p&gt;Following are some things that may confuse you, make sure you follow them through, especially if you are a Linux user&lt;/p&gt;
+&lt;h3 id=&#34;things-to-watch-out-for&#34;&gt;&lt;strong&gt;Things to Watch out For&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;If you are working on Linux, you will probably see this text when executing jekyll new command :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;The dependency tzinfo-data (&amp;gt;= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run bundle lock --add-platform mingw, mswin, x64_mingw, jruby.&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Basically, the command is not required for Unix-based systems
+The reason for this has been explained &lt;a href=&#34;https://github.com/tzinfo/tzinfo-data/issues/12#issuecomment-279554001&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To correct it , just open the Gemfile and edit it.
+Your Gemfile may look somewhat like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://rubygems.org&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Hello! This is where you manage which Jekyll version is used to run.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# When you want to use a different version, change it below, save the&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#     bundle exec jekyll serve&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# This will help ensure the proper Jekyll version is running.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Happy Jekylling!&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;jekyll&amp;#34;, &amp;#34;~&amp;gt; 3.8.5&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# This is the default theme for new Jekyll sites. You may change this to anything you like.&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;minima&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 2.0&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# If you want to use GitHub Pages, remove the &amp;#34;gem &amp;#34;jekyll&amp;#34;&amp;#34; above and&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# uncomment the line below. To upgrade, run `bundle update github-pages`.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;github-pages&amp;#34;, group: :jekyll_plugins&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# If you have any plugins, put them here!&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;group&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;jekyll-feed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 0.6&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Windows does not include zoneinfo files, so bundle the tzinfo-data gem&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;tzinfo-data&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;platforms&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;:mingw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:mswin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:x64_mingw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jruby&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Performance-booster for watching directories on Windows&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;wdm&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 0.1.0&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Gem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;win_platform?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remove or comment out the lines (ingnore if using Windows) like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;tzinfo-data&amp;#34;, platforms: [:mingw, :mswin, :x64_mingw, :jruby]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;wdm&amp;#34;, &amp;#34;~&amp;gt; 0.1.0&amp;#34; if Gem.win_platform?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Also, if you are using Jekyll for Github Pages (which we are), uncomment this line in the Gemfile&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;github-pages&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jekyll_plugins&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After these changes, your file will look something like this.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://rubygems.org&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Hello! This is where you manage which Jekyll version is used to run.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# When you want to use a different version, change it below, save the&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#     bundle exec jekyll serve&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# This will help ensure the proper Jekyll version is running.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Happy Jekylling!&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;jekyll&amp;#34;, &amp;#34;~&amp;gt; 3.8.5&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# This is the default theme for new Jekyll sites. You may change this to anything you like.&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;minima&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 2.0&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# If you want to use GitHub Pages, remove the &amp;#34;gem &amp;#34;jekyll&amp;#34;&amp;#34; above and&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# uncomment the line below. To upgrade, run `bundle update github-pages`.&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;github-pages&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jekyll_plugins&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# If you have any plugins, put them here!&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;group&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;jekyll-feed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 0.6&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Windows does not include zoneinfo files, so bundle the tzinfo-data gem&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;tzinfo-data&amp;#34;, platforms: [:mingw, :mswin, :x64_mingw, :jruby]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Performance-booster for watching directories on Windows&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;wdm&amp;#34;, &amp;#34;~&amp;gt; 0.1.0&amp;#34; if Gem.win_platform?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Save the changes and execute the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bundle update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All the required things have now been taken care of. Just execute this command and see the magic at &lt;a href=&#34;http://localhost:4000/&#34;target=&#34;_blank&#34;&gt;http:/localhost:4000/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;whats-next&#34;&gt;&lt;strong&gt;What`s Next&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Well now you have set up Jekyll. You can customize it, and add your content. Check out the jekyll themes for your github page.
+And keep blogging!&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

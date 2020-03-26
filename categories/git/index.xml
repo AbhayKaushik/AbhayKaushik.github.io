@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>git on A Novice&#39;s Nook</title>
+    <link>/categories/git/</link>
+    <description>Recent content in git on A Novice&#39;s Nook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Sat, 17 Aug 2019 13:47:30 +0530</lastBuildDate>
+    
+        <atom:link href="/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating a Pull Request</title>
+      <link>/posts/2019-08-17-git-pull-requests/</link>
+      <pubDate>Sat, 17 Aug 2019 13:47:30 +0530</pubDate>
+      
+      <guid>/posts/2019-08-17-git-pull-requests/</guid>
+      <description>&lt;p&gt;In life, when you want to make changes to someone else`s work, its proper to request.&lt;/p&gt;
+&lt;p&gt;In git too, we have to make requests.
+Be it the pull requests in Github or the merge requests in Gitlab, you need to make requests to propose changes to repositories you only have read access to.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This blog writer assumes that you are working on Github. However, if you aren&amp;rsquo;t , replacing &amp;lsquo;pull request&amp;rsquo; with &amp;lsquo;merge request&amp;rsquo; for Gitlab should do the trick&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Pull requests are an essential part of contributing to Open Source.
+Any change that you wish to add to the public repo (not owned by you) can only be done by sending a pull request to the owner of the repository.&lt;/p&gt;
+&lt;p&gt;Generally, changes are done to branches other than the master branch. Master branch is the one which has all the final stable work.
+If there is a topic branch relevant to your changes, then you should make a pull request on that branch.&lt;/p&gt;
+&lt;p&gt;In case there isn&amp;rsquo;t any such branch, you can create a new one for the topic you want to address.
+However, you must be the owner of the repository to make branches. Or, if the the repo belongs to an organization, you must be a member.In essence, a person with write permissions&lt;/p&gt;
+&lt;p&gt;If you are none of them, do not worry as then you can fork their repo instead of branching and then make changes to your fork.&lt;/p&gt;
+&lt;p&gt;After forking, you can clone your repository in your local computer and make the changes that you wish to add.
+Make sure you read the contributing guidelines to understand how to submit the proposed changes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git clone forked-repo-url
+$ git add files-you-added-changes-to
+$ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Reason why you made these changes&amp;#34;&lt;/span&gt;
+$ git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now that you have made the required changes to your fork, you are ready to make a pull request.&lt;/p&gt;
+&lt;p&gt;To make the pull request, just specify which branch you want to merge your changes and click the pull request option.
+&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/pull-request.png&#34;&gt;&lt;img  src=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/pull-request.png&#34;
+        alt=&#34;Pull Request&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Add a message in the manner described in the contributing guidelines. If there is a pull request template, write the message accordingly.&lt;/p&gt;
+&lt;p&gt;Write the message and then send the pull request. Your pull request will now show up on the pull requests section of the repo you forked.&lt;/p&gt;
+&lt;p&gt;Congratulations! You have sucessfully created your pull request.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Git Wizardry</title>
+      <link>/posts/2019-07-24-git-wizardry/</link>
+      <pubDate>Wed, 24 Jul 2019 10:08:57 +0530</pubDate>
+      
+      <guid>/posts/2019-07-24-git-wizardry/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;The following is a monologue I have made to make learning git
+a bit more interesting.&lt;/p&gt;
+&lt;p&gt;Any resemblance to the some other story is purely coincidental.
+None of the git commands have been abused during the making of this post :P&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In case you may get confused:&lt;/p&gt;
+&lt;p&gt;Spells - Files&lt;/p&gt;
+&lt;p&gt;Incantations - Commands&lt;/p&gt;
+&lt;p&gt;Records/Magic Book - Repository&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hello there! I am your teacher at the School of Terminal Wizardry and I will be teaching you Git Magic.
+Terminals are all around us. Terminal Wizards are the ones who have the power to manipulate terminals for their own use.
+Git Magic was derived from the theory of &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control&#34;target=&#34;_blank&#34;&gt;version control&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I will now give you an overview of Git Magic Incantations
+This first incantation is for initiation of git magic in your own magic book.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;When used in the terminal with git installed, this incantation forces it to serve your version control demands by initiating a new magic book.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git init
+Initialized empty Git repository in /home/magic-book/.git/
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And so your journey of git magic manipulation begins. . .&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;When you first create your magic book, it is empty. However, you can add new spells and other magic upon it.&lt;/p&gt;
+&lt;p&gt;Your spellbook is just like any normal book. The pages at the back are treated as rough pages by almost everyone (except those who make an entire notebook as rough XD)&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-repos.png&#34;&gt;&lt;img  src=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-repos.png&#34;
+        alt=&#34;Git Repos&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The engravings are on the fair part of the spell book, which have the correct spells (people call it the local repo).
+While the rough part at the back is where you make small changes or add new stuff (people call it the working directory, as the real work is done there XP).&lt;/p&gt;
+&lt;p&gt;The adding incantation makes the git magic track changes in your spells as well prepare them for engraving by moving them to staging area (a stage between working directory and repository), making your rough side empty (no need of eraser :))&lt;/p&gt;
+&lt;p&gt;Now, copying from rough to fair is a time-consuming (and boring task :P). Git magic does that for you.
+Just use the git commit incantation and all your work tracked by Git (present in staging area) is saved onto the fair side (local repo)&lt;/p&gt;
+&lt;p&gt;You can see which all spells are being modified or are untracked, the commits so far, as well as the current branch, using this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to see the status (of working directory and staging area) of the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;With so much info provided by this incantation, this will be the spell most used by you.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git rm --cached &amp;lt;file&amp;gt;...&amp;#34;&lt;/span&gt; to unstage&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+	new file:   basic-spell.txt
+
+Untracked files:
+  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git add &amp;lt;file&amp;gt;...&amp;#34;&lt;/span&gt; to include in what will be committed&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+	basic-spell-multiple.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can add spells to your book using this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git add &amp;lt;spell-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to add a new magic spell to the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In case you want to add multiple spells to your magic book, you can use this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git add - A&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to add all the magic spells to the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In case you have added a spell by mistake and want to remove it,  you can use this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git rm -r&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to remove added magic spells to the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To engrave these spells onto your magic book, you can use this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git commit -m [“Message Text”]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to commit the magic spells added earlier to the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You also need to add a text along with the commit incantation.
+Written in that text, should be the reasoning behind adding that change or a new spell, so that you remember it when you open your magic book again.
+(there are too many spells to work on these days :P)&lt;/p&gt;
+&lt;p&gt;You should always write good commit messages.Don&amp;rsquo;t know how? Try this &lt;a href=&#34;https://chris.beams.io/posts/git-commit/&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These are all the basic commands. The following command is a powerful one.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone ssh://git@github.com/username/repository-name.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows you to copy someone else’s magic book into your own magic book and make changes within your book&lt;/em&gt;
+(great incantation to have, right? XP)&lt;/p&gt;
+&lt;p&gt;This command is widely used by practicing wizards. Due to this, any terminal wizard can use the cloning spell and work upon the book without starting from scratch.&lt;/p&gt;
+&lt;p&gt;Now, onto the next part. . .&lt;/p&gt;
+&lt;h2 id=&#34;branching-up&#34;&gt;Branching Up&lt;/h2&gt;
+&lt;p&gt;There can be multiple types of magic spells in a magic book.
+However, instead of creating a new magic book for specialized spells of each type, we can use the same one again by a skill called branching.
+Branching is also used when you are experimenting on a spell improvement but don&amp;rsquo;t want the current spell to break (think of it as the last page you use for rough work :P)&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-branching.gif&#34;&gt;&lt;img  src=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-branching.gif&#34;
+        alt=&#34;Branching&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git branch &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This git incantation allows the user to create another branch of the current magic book&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git branch 
+  fire-spell
+  ice-spell
+* master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Want to delete a branch that you made? No problem,use this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git branch -d &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This git incantation allows the user to create another branch of the current magic book&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git branch -d ice-spell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To shift from one branch to another, when working on different spells,use this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git checkout &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows us to switch a branch within the repository.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git checkout fire-spell
+:~/magic-book$ git branch
+* fire-spell
+  master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;git checkout -b &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This git incantation allows us to both create another branch within the repository and switch to it.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git checkout -b ice-spell
+:~/magic-book$ git branch
+  fire-spell
+* ice-spell
+  master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, if you were using it for experimenting on your spell and the change works, then you can add the changes to the book by this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git merge &amp;lt;source-branch&amp;gt; [target-branch]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allows a wizard to merge a the source branch into the target branch.If the target branch is not mentioned, then the branch is merged into the active branch.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git status
+On branch master
+nothing to commit, working tree clean
+
+:~/magic-book$ git merge fire-spell
+Updating 3515790..043b603
+Fast-forward
+ firespell.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; +-
+ &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; file changed, &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; insertion&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; deletion&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;By this time, I am sure you would have done a lot of work on your spells.&lt;/p&gt;
+&lt;p&gt;Want to share your work? You&amp;rsquo;ll need to create a remote copy of your magic book.
+This remote copy can be made in any Git platform and allows other wizards to copy from this remote magic book using the git clone command we talked about earlier.&lt;/p&gt;
+&lt;p&gt;Next, we will learn more about sharing your magic book.&lt;/p&gt;
+&lt;h2 id=&#34;remote-but-together&#34;&gt;Remote but Together&lt;/h2&gt;
+&lt;p&gt;Remote magic books are very important part for terminal wizards. It allows us to copy other magic books as well as share ours.&lt;/p&gt;
+&lt;p&gt;Often, terminal wizards work together on powerful spells and creating new incantations.
+They create projects within an organization, of which they are members.
+So that they can combine their work, they clone a remote magic book created by them (the organization book) and work on their copy of that magic book, called origin.&lt;/p&gt;
+&lt;p&gt;To create this remote, the follwowing incantation must be invoked:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git remote add &amp;lt;remote-name&amp;gt; &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allow the user to create a remote (called origin by default) to the repository mentioned in the url&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;After working on the spell, they add the updated work in their local magic book back to the remote one. This way others can now copy an updated remote book (amazing, isn&amp;rsquo;t it?)&lt;/p&gt;
+&lt;p&gt;To update the organization book, you need to create another remote made by this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git remote add upstream &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allow the user to create a remote called upstream to the repository mentioned in the url&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-remote.png&#34;&gt;&lt;img  src=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-remote.png&#34;
+        alt=&#34;Image&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation pushes the spells present in the master branch(local copy) to origin (remote copy)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git push upstream master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation pushes the spells present in master branch(local copy) to upstream (remote organization book in this case)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say your fellow wizards pushed the code before you and you want to see htier changes then you can use this invocation:
+&lt;code&gt;git pull origin master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation copies/pulls the spells present in the origin (remote copy) into the master branch(local copy)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git push upstream master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation copies/pulls the spells present in upstream (remote organization book in this case) to master branch (local copy)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There is another use of it. You can pull the copy of remote book in case you want to work on your spells and don&amp;rsquo;t have your magic book around.&lt;/p&gt;
+&lt;p&gt;Ancient terminal wizards have always documented their research on spells in their magic books.
+After using the git clone incantation, we can see the whole research process.
+This includes the wizards who contributed as well as the reasoning behind each and every change using this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git log [--flags]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allows the user to see the changes made by in the magic book with the most recent changes at the top&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;git log is a very powerful command and provides a lot of data.To make it easier for fellow wizards to look for the required data,
+there are many flags which can be added after the git log incantation :&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--summary&lt;/code&gt;
+Allows user to view changes in a detailed manner&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--author &amp;lt;author-name&amp;gt;&lt;/code&gt;
+Allows the user to see the changes made in the magic book by a specific wizard.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--since&lt;/code&gt;
+Allows the user to see the changes made to the magic book since a given time or date-time&lt;/p&gt;
+&lt;p&gt;Now, so that the remote book doesn&amp;rsquo;t get corrupted, each change is submitted as a request which must be accepted by the maker of that book.
+Sometimes the book is maintained by more than one wizard.&lt;/p&gt;
+&lt;p&gt;Now let&amp;rsquo;s say you are the one receiving the request, and you want to see what changes have been made.You can see that using this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git diff &amp;lt;source branch&amp;gt; &amp;lt;target branch&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allows the user to preview changes before merging&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;~/magic-book$ git diff fire-spell master
+diff --git a/firespell.txt b/firespell.txt
+index 46e039b..469f750 &lt;span class=&#34;m&#34;&gt;100644&lt;/span&gt;
+--- a/firespell.txt
++++ b/firespell.txt
+@@ -1 +1 @@
+-Flames of Heaven!
++Flame!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;That&amp;rsquo;s it for the overview! (you forgot it was an overview, didn&amp;rsquo;t you? XD)&lt;/p&gt;
+&lt;p&gt;Git Magic is much more vast and has lots of features for very specialized uses.
+Keep learning and aim to be a better terminal wizard.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

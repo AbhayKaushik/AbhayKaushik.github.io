@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Reading PYM book: Day 3&nbsp;&ndash;&nbsp;A Novice&#39;s Nook</title><link rel="stylesheet" href="/css/core.min.851f5181448e7e5e2219717b346282751186a92327b3dda2d30c3d7116596593cc943005e2ba64b04182b458c20b9e04.css" integrity="sha384-hR9RgUSOfl4iGXF7NGKCdRGGqSMns92i0ww9cRZZZZPMlDAF4rpksEGCtFjCC54E"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">A Novice's Nook</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">My experiences with learning new things</span></div></section><div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Reading PYM book: Day 3</h1><p class="article date">Friday, August 16, 2019</p></section><article class="article markdown-body"><ul>
+<li>
+<h1 id="data-structures">Data Structures</h1>
+<ul>
+<li>
+<p>Lists were discussed in more detail.</p>
+</li>
+<li>
+<p>Lists were used as stack using the <code>pop()</code> function and as queues using <code>pop(index)</code> function.</p>
+</li>
+<li>
+<p>List comprehension: <em>concise way of creating lists</em></p>
+</li>
+<li>
+<p>Tuples: <em>elements seperated by commas, enclosed within parentheses. Tuples are immutable.</em></p>
+<p>I didn&rsquo;t know that we could create a tuple with a single value by adding a trailing comma.</p>
+<p><code>a = (123,)</code></p>
+</li>
+<li>
+<p>Set: <em>data structure with no duplicate items, elements enclosed within curly braces.</em></p>
+</li>
+<li>
+<p>Dictionaries: <em>unordered set of key-value pairs, where keys are unique. Enclosed by curly braces</em>
+Mutable objects such as list, cannot be used as a key in dictionaries.</p>
+</li>
+<li>
+<p><code>enumerate()</code> function for getting iteration number as well as the value when looping through a list. <code>zip()</code> function for iterating through two sequences at the same time.</p>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="strings">Strings</h1>
+<ul>
+<li>Text in simple terms. Learnt that string literals alongside each other, behave like single string.</li>
+<li>String object has many builtin methods. Some of ones I have used less often are:
+<ul>
+<li><code>title()</code> <em>which returns titlecased string</em></li>
+<li><code>isalnum()</code> <em>for checking if the string has alphanumeric characters or not</em></li>
+<li><code>isalpha()</code> <em>for checking if the string has alphabets or not</em></li>
+<li><code>lstrip(chars)</code> <em>for removing characters from the left</em> and <code>rstrip(chars)</code> <em>for removing characters from the right</em></li>
+<li><code>swapcase()</code> <em>for swapping the cases in the string, uppercase to lowercase and vice-versa</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="functions">Functions</h1>
+<ul>
+<li>
+<p>Reusing a code that is required many times in a program.</p>
+<p>Functions are defined using the <code>def</code> keyword.</p>
+<p><code>if __name__ == '__main__':</code> had been a long lost doubt of mine. I finally understood why to use it.</p>
+<p><code>__name__</code> is a Python variable that gets its value depending upon execution method of the script. It is set to <code>__main__</code> if it is executed as a script.
+If it is imported as a module, it is set to the name of the script.
+So basically, <code>if __name__ == '__main__':</code> is used to add code that will be executed in the script but not when used as a module.
+I learnt about it from this <a href="https://www.freecodecamp.org/news/whats-in-a-python-s-name-506262fe61e8/"target="_blank">link</a></p>
+</li>
+<li>
+<p>Local and Global variables.Unless declared, functions work on local variables. To make global variables, just use <code>global</code> keyword.</p>
+</li>
+<li>
+<p>Default argument values (in case the user refuses to give a value :P)</p>
+<p>You cannot have arguments without default values after an argument has been given default values. (changing the order can resolve this problem if you don&rsquo;t want to give a default value)</p>
+</li>
+<li>
+<p>An interesting thing I learnt: if your default argument is an empty list (mutable object), things can wrong. It&rsquo;s better to set list as None and then set to [] if it remains None.</p>
+</li>
+<li>
+<p>Learnt about keyword only argument, which forces the user to use correct keyword for each parameter.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">func</span> <span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">arg</span> <span class="o">=</span> <span class="n">value</span><span class="p">):</span>
+</code></pre></div><p>All the other arguments are included in *.To input the specific argument, you will have to use the keyword. You can read more about this from <a href="https://www.python.org/dev/peps/pep-3102/"target="_blank">here</a></p>
+</li>
+<li>
+<p>Docstrings were also introduced in this section. I learnt about auto-documentation.</p>
+</li>
+<li>
+<p>Higher order functions were a new thing for me.They include functions that take one or more functions as arguments or return another function as output.</p>
+</li>
+<li>
+<p>Learnt about <code>map()</code> function properly this time. It basically &lsquo;maps&rsquo; an iterator to a function, so each value of the iterator is passed to the function.</p>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="file-handling">File Handling</h1>
+<ul>
+<li>
+<p>As the name suggests, handling files, which involves opening,reading, writing and closing files.</p>
+</li>
+<li>
+<p><code>open()</code> function is used to open files.It takes two arguments, the filepath and the mode in which it needs to be opened.</p>
+</li>
+<li>
+<p>Some of the reading modes are:</p>
+<ul>
+<li>r <em>read-only mode</em></li>
+<li>w <em>allows writing on file</em></li>
+<li>a <em>allows appending on the file</em></li>
+</ul>
+</li>
+<li>
+<p>File handling is a tough business to handle in code.Make sure you take precautions, i.e., close files after their work is done, read and write on files of known size. Your main memory will thank you for it. In case the file is too big, just read it line by line :)</p>
+</li>
+<li>
+<p>Now to help you a bit in file handing, we have <code>open with ('filpath','mode') as filename:</code> method to the rescue. This ensures that the file closes in case you forget to.</p>
+</li>
+</ul>
+</li>
+<li>
+<h1 id="error-handling">Error Handling</h1>
+<p>Errors can come any time. While testing, and even after deployment. You must now how to handle errors.
+Some of the errors that we see most of the time are NameError and TypeError. (happens to newbies all the time :P)</p>
+<ul>
+<li>
+<p>NameError: literal sense - error in name.
+Happens when python doesn&rsquo;t understand a name. Generally this error occurs when we misspell a variable name.</p>
+</li>
+<li>
+<p>TypeError: literal sense - error in type.
+This error happens when type is wrong, i.e. the datatype you are performing the operation on is incompatible for it.</p>
+</li>
+</ul>
+<p>With bugs crashing the programs (and all hope for peace of mind :P), your only hope is try-except blocks.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># code statments that may lead to an error</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="c1"># code statements that run in case an error does take place</span>
+</code></pre></div><p>Code in the try block just runs like a normal code. If in case, an error is encountered, control goes to except block, which then runs code for handling errors.</p>
+</li>
+</ul>
+</article><section class="article labels"><a class="tag" href=/tags/python/>python</a></section></div><section class="article navigation"><p><a class="link" href="/posts/2019-08-17-git-pull-requests/"><span class="li">&larr;</span>Creating a Pull Request</a></p><p><a class="link" href="/posts/2019-08-13-reading-pym-day2/"><span class="li">&rarr;</span>Reading PYM book: Day 2</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Notepadium.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></div>
+</body>
+
+</html>

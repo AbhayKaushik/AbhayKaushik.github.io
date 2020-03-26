@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on A Novice&#39;s Nook</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on A Novice&#39;s Nook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>©2020 Notepadium.</copyright>
+    <lastBuildDate>Sat, 17 Aug 2019 13:47:30 +0530</lastBuildDate>
+    
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Creating a Pull Request</title>
+      <link>/posts/2019-08-17-git-pull-requests/</link>
+      <pubDate>Sat, 17 Aug 2019 13:47:30 +0530</pubDate>
+      
+      <guid>/posts/2019-08-17-git-pull-requests/</guid>
+      <description>&lt;p&gt;In life, when you want to make changes to someone else`s work, its proper to request.&lt;/p&gt;
+&lt;p&gt;In git too, we have to make requests.
+Be it the pull requests in Github or the merge requests in Gitlab, you need to make requests to propose changes to repositories you only have read access to.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This blog writer assumes that you are working on Github. However, if you aren&amp;rsquo;t , replacing &amp;lsquo;pull request&amp;rsquo; with &amp;lsquo;merge request&amp;rsquo; for Gitlab should do the trick&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Pull requests are an essential part of contributing to Open Source.
+Any change that you wish to add to the public repo (not owned by you) can only be done by sending a pull request to the owner of the repository.&lt;/p&gt;
+&lt;p&gt;Generally, changes are done to branches other than the master branch. Master branch is the one which has all the final stable work.
+If there is a topic branch relevant to your changes, then you should make a pull request on that branch.&lt;/p&gt;
+&lt;p&gt;In case there isn&amp;rsquo;t any such branch, you can create a new one for the topic you want to address.
+However, you must be the owner of the repository to make branches. Or, if the the repo belongs to an organization, you must be a member.In essence, a person with write permissions&lt;/p&gt;
+&lt;p&gt;If you are none of them, do not worry as then you can fork their repo instead of branching and then make changes to your fork.&lt;/p&gt;
+&lt;p&gt;After forking, you can clone your repository in your local computer and make the changes that you wish to add.
+Make sure you read the contributing guidelines to understand how to submit the proposed changes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git clone forked-repo-url
+$ git add files-you-added-changes-to
+$ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Reason why you made these changes&amp;#34;&lt;/span&gt;
+$ git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now that you have made the required changes to your fork, you are ready to make a pull request.&lt;/p&gt;
+&lt;p&gt;To make the pull request, just specify which branch you want to merge your changes and click the pull request option.
+&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/pull-request.png&#34;&gt;&lt;img  src=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/pull-request.png&#34;
+        alt=&#34;Pull Request&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Add a message in the manner described in the contributing guidelines. If there is a pull request template, write the message accordingly.&lt;/p&gt;
+&lt;p&gt;Write the message and then send the pull request. Your pull request will now show up on the pull requests section of the repo you forked.&lt;/p&gt;
+&lt;p&gt;Congratulations! You have sucessfully created your pull request.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Reading PYM book: Day 3</title>
+      <link>/posts/2019-08-16-reading-pym-day3/</link>
+      <pubDate>Fri, 16 Aug 2019 10:00:57 +0530</pubDate>
+      
+      <guid>/posts/2019-08-16-reading-pym-day3/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;data-structures&#34;&gt;Data Structures&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Lists were discussed in more detail.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lists were used as stack using the &lt;code&gt;pop()&lt;/code&gt; function and as queues using &lt;code&gt;pop(index)&lt;/code&gt; function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List comprehension: &lt;em&gt;concise way of creating lists&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tuples: &lt;em&gt;elements seperated by commas, enclosed within parentheses. Tuples are immutable.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I didn&amp;rsquo;t know that we could create a tuple with a single value by adding a trailing comma.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;a = (123,)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Set: &lt;em&gt;data structure with no duplicate items, elements enclosed within curly braces.&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dictionaries: &lt;em&gt;unordered set of key-value pairs, where keys are unique. Enclosed by curly braces&lt;/em&gt;
+Mutable objects such as list, cannot be used as a key in dictionaries.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;enumerate()&lt;/code&gt; function for getting iteration number as well as the value when looping through a list. &lt;code&gt;zip()&lt;/code&gt; function for iterating through two sequences at the same time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;strings&#34;&gt;Strings&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Text in simple terms. Learnt that string literals alongside each other, behave like single string.&lt;/li&gt;
+&lt;li&gt;String object has many builtin methods. Some of ones I have used less often are:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;title()&lt;/code&gt; &lt;em&gt;which returns titlecased string&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isalnum()&lt;/code&gt; &lt;em&gt;for checking if the string has alphanumeric characters or not&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;isalpha()&lt;/code&gt; &lt;em&gt;for checking if the string has alphabets or not&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lstrip(chars)&lt;/code&gt; &lt;em&gt;for removing characters from the left&lt;/em&gt; and &lt;code&gt;rstrip(chars)&lt;/code&gt; &lt;em&gt;for removing characters from the right&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;swapcase()&lt;/code&gt; &lt;em&gt;for swapping the cases in the string, uppercase to lowercase and vice-versa&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;functions&#34;&gt;Functions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Reusing a code that is required many times in a program.&lt;/p&gt;
+&lt;p&gt;Functions are defined using the &lt;code&gt;def&lt;/code&gt; keyword.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;if __name__ == &#39;__main__&#39;:&lt;/code&gt; had been a long lost doubt of mine. I finally understood why to use it.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;__name__&lt;/code&gt; is a Python variable that gets its value depending upon execution method of the script. It is set to &lt;code&gt;__main__&lt;/code&gt; if it is executed as a script.
+If it is imported as a module, it is set to the name of the script.
+So basically, &lt;code&gt;if __name__ == &#39;__main__&#39;:&lt;/code&gt; is used to add code that will be executed in the script but not when used as a module.
+I learnt about it from this &lt;a href=&#34;https://www.freecodecamp.org/news/whats-in-a-python-s-name-506262fe61e8/&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Local and Global variables.Unless declared, functions work on local variables. To make global variables, just use &lt;code&gt;global&lt;/code&gt; keyword.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Default argument values (in case the user refuses to give a value :P)&lt;/p&gt;
+&lt;p&gt;You cannot have arguments without default values after an argument has been given default values. (changing the order can resolve this problem if you don&amp;rsquo;t want to give a default value)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An interesting thing I learnt: if your default argument is an empty list (mutable object), things can wrong. It&amp;rsquo;s better to set list as None and then set to [] if it remains None.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learnt about keyword only argument, which forces the user to use correct keyword for each parameter.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arg&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All the other arguments are included in *.To input the specific argument, you will have to use the keyword. You can read more about this from &lt;a href=&#34;https://www.python.org/dev/peps/pep-3102/&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docstrings were also introduced in this section. I learnt about auto-documentation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Higher order functions were a new thing for me.They include functions that take one or more functions as arguments or return another function as output.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learnt about &lt;code&gt;map()&lt;/code&gt; function properly this time. It basically &amp;lsquo;maps&amp;rsquo; an iterator to a function, so each value of the iterator is passed to the function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;file-handling&#34;&gt;File Handling&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;As the name suggests, handling files, which involves opening,reading, writing and closing files.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;open()&lt;/code&gt; function is used to open files.It takes two arguments, the filepath and the mode in which it needs to be opened.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Some of the reading modes are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;r &lt;em&gt;read-only mode&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;w &lt;em&gt;allows writing on file&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;a &lt;em&gt;allows appending on the file&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;File handling is a tough business to handle in code.Make sure you take precautions, i.e., close files after their work is done, read and write on files of known size. Your main memory will thank you for it. In case the file is too big, just read it line by line :)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now to help you a bit in file handing, we have &lt;code&gt;open with (&#39;filpath&#39;,&#39;mode&#39;) as filename:&lt;/code&gt; method to the rescue. This ensures that the file closes in case you forget to.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;error-handling&#34;&gt;Error Handling&lt;/h1&gt;
+&lt;p&gt;Errors can come any time. While testing, and even after deployment. You must now how to handle errors.
+Some of the errors that we see most of the time are NameError and TypeError. (happens to newbies all the time :P)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NameError: literal sense - error in name.
+Happens when python doesn&amp;rsquo;t understand a name. Generally this error occurs when we misspell a variable name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TypeError: literal sense - error in type.
+This error happens when type is wrong, i.e. the datatype you are performing the operation on is incompatible for it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With bugs crashing the programs (and all hope for peace of mind :P), your only hope is try-except blocks.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# code statments that may lead to an error&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;except&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# code statements that run in case an error does take place&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Code in the try block just runs like a normal code. If in case, an error is encountered, control goes to except block, which then runs code for handling errors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Reading PYM book: Day 2</title>
+      <link>/posts/2019-08-13-reading-pym-day2/</link>
+      <pubDate>Tue, 13 Aug 2019 10:10:57 +0530</pubDate>
+      
+      <guid>/posts/2019-08-13-reading-pym-day2/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;if-else&#34;&gt;if-else&lt;/h1&gt;
+&lt;p&gt;Want to give your program the power of decision-making?
+Just add if-else statements to the code.&lt;/p&gt;
+&lt;p&gt;This is where the identation practices come into play. (Wrong output despite the if-else statement can frustate you :P)&lt;/p&gt;
+&lt;p&gt;if-else can be nested and can also be extended by elif statements (if you have more than 2 choices)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Truth value testing:
+Another good practice&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# code statements&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and not &lt;code&gt;x == True:&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I have made this mistake many times.&lt;/p&gt;
+&lt;p&gt;The reason you shouldn&amp;rsquo;t do this is that every single object in Python can be evaluated to True or False.
+The PEP 8 Style Guide recommends against comparing a value to True or False as it is less readable and will frequently return an unexpected Boolean.
+(I found the reason with the help of this &lt;a href=&#34;https://www.digitalocean.com/community/tutorials/understanding-boolean-logic-in-python-3&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;looping&#34;&gt;Looping&lt;/h1&gt;
+&lt;p&gt;Want the program do to a task repeatedly?
+Loop the task instead of writing it multiple times&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;lists&#34;&gt;Lists&lt;/h1&gt;
+&lt;p&gt;A data structure. Implemented using square brackets.
+You can use slicing to access specific elements of list: &lt;code&gt;list[start:stop-before:step]&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Learnt about range() function from a new perspective. Did not realize earlier that it was a generator function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Reading PYM book: Day 1</title>
+      <link>/posts/2019-08-12-reading-pym-day1/</link>
+      <pubDate>Mon, 12 Aug 2019 10:00:57 +0530</pubDate>
+      
+      <guid>/posts/2019-08-12-reading-pym-day1/</guid>
+      <description>&lt;p&gt;Recently, I was suggested to read the book &lt;a href=&#34;https://pymbook.readthedocs.io/en/latest/&#34;target=&#34;_blank&#34;&gt;Python for you and me&lt;/a&gt;, for learning Python programming language.&lt;/p&gt;
+&lt;p&gt;Although I know a bit of Python, I thought it would be good to revise my fundamentals again.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;beginning-section&#34;&gt;Beginning Section&lt;/h1&gt;
+&lt;p&gt;The beginning section was really good. It mentions about :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python Interpreter : &lt;em&gt;The interpreter which can access the code&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Whitespaces and Indentation : &lt;em&gt;How to handle spaces while writing code&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Source Files : &lt;em&gt;making py files executable&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Comments : &lt;em&gt;writing comments to remember why you did this&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Modules : &lt;em&gt;stuff made by others that you can use for free&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I liked the fact that best practices are mentioned alongside programming concepts.
+Some new best practices I learnt were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One blank line between functions.&lt;/li&gt;
+&lt;li&gt;Two blank lines between classes.&lt;/li&gt;
+&lt;li&gt;Add a space after “,” in dicts, lists, tuples, and argument lists and after “:” in dicts.&lt;/li&gt;
+&lt;li&gt;Spaces around assignments and comparisons (except in argument list)&lt;/li&gt;
+&lt;li&gt;No spaces just inside parentheses.&lt;/li&gt;
+&lt;li&gt;Add a space after the # in comments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Though most of them won&amp;rsquo;t give errors if you don&amp;rsquo;t follow them. However, they &lt;code&gt;increase code readability&lt;/code&gt; and make it &lt;code&gt;easier to correct any errors&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Also,  one basic thing that I learnt just some days before reading the book was making the a .py file executable.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ chmod +x helloworld.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;One raging doubt I had was how does the compiler gets to know about she-bang,
+&lt;code&gt;#!/usr/env/bin python&lt;/code&gt; as # used for comments in python.
+After some more study, I realized that I was thinking all wrong, the python interpreter comes into picture after the she-bang part.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In Unix-like operating systems, when a text file with a shebang is used as if it is an executable, the program loader mechanism parses the rest of the file&amp;rsquo;s initial line as an interpreter directive.
+The loader executes the specified interpreter program, passing to it as an argument the path that was initially used when attempting to run the script, so that the program may use the file as input data.&lt;/p&gt;
+&lt;p&gt;~ Wikipedia&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(In short, program loader calls the appropriate interpreter after seeing the she-bang :P )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;mu-editor&#34;&gt;mu Editor&lt;/h1&gt;
+&lt;p&gt;Also, I got to know about mu editor for python. (I only knew about IDLE)&lt;/p&gt;
+&lt;p&gt;mu is more beginner-friendly.&lt;/p&gt;
+&lt;p&gt;Learnt about REPL (read-evaluate-print-loop). It basically means reading user input, evaluating it, printing the result and then repeat these 3 steps.
+You can know more about them from &lt;a href=&#34;https://pythonprogramminglanguage.com/repl/&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It basically refers to the shell you run by typing python in the terminal. Used it many times but didn&amp;rsquo;t know about REPL.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;variables-and-datatypes&#34;&gt;Variables and Datatypes&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Learnt about f-strings and why they were included from the talk mentioned in the book.
+The reason was that the previous method of formatting was error-prone, inflexible and cumbersome.&lt;/p&gt;
+&lt;p&gt;We had .format, but code was longer, and we were repeating things. It was cumbersome to make small changes, so then f-strings were introduced.&lt;/p&gt;
+&lt;p&gt;Just remove the .format part and then add &amp;lsquo;f&amp;rsquo; before the string
+(Too easy, isn&amp;rsquo;t it? :D)&lt;/p&gt;
+&lt;p&gt;Also learnt about PEP(Python Enhancement Proposal) from the talk.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Learnt about tuple packing and unpacking. I had used them but didn&amp;rsquo;t intuitively associate them with tuples.
+I found myself using unpacking more often after reading that (Baader-Meinhof phenomenon maybe :P)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h1 id=&#34;operators-and-expression&#34;&gt;Operators and Expression&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;An important and basic section.
+Operators: &lt;em&gt;Arithmetic, Logical, Relational, Shorthand&lt;/em&gt;
+Expression: &lt;em&gt;Collection of operators and operands&lt;/em&gt; (with some parentheses along the way)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Also mentioned type-conversion (we change type of a variable whose type we never declare :P)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Automating Image Scraping</title>
+      <link>/posts/2019-07-31-automating-image-scraping/</link>
+      <pubDate>Wed, 31 Jul 2019 10:09:50 +0530</pubDate>
+      
+      <guid>/posts/2019-07-31-automating-image-scraping/</guid>
+      <description>&lt;p&gt;Yeah, this is the second part of image scraping blog. You see, even after making the script, I was not satisfied.&lt;/p&gt;
+&lt;p&gt;First, I will have to execute the script every time I want to see the latest images (obviously..) but I may forget to run the script one morning (it’s really difficult to be regular :P)&lt;/p&gt;
+&lt;p&gt;Second, the sub-reddits that I have selected are very active and new posts keep popping up.
+So, it’s quite possible that I may lose some of them if I don’t check on them regularly.
+Reddit only loads the top posts according to preference and you have to scroll down to load more, which makes it difficult to scrape the entire page and you only get these top posts.&lt;/p&gt;
+&lt;p&gt;Now, as you may have guessed, the answer to this : automation! So, I searched on how to automate scripts, and I stumbled across cron jobs.&lt;/p&gt;
+&lt;p&gt;Basically, cron is a time-based job scheduler in Unix-like computer operating systems.
+Cron is used to schedule jobs to run periodically at fixed times, dates, or intervals, especially by those maintaining software environments.&lt;/p&gt;
+&lt;p&gt;You can learn more from this &lt;a href=&#34;https://www.adminschoice.com/crontab-quick-reference&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;First I had thought of automating this process in a cloud VM, and host a site with periodically changing the html file stored there.
+However, it is diffcult to do without a billing account (I am not going to use credit cards just yet :D )&lt;/p&gt;
+&lt;p&gt;I stumbled across many searches and methods and finally reached MongoDB along with Heroku. It may work but it&amp;rsquo;ll take more time, so I will cover it in some other post.&lt;/p&gt;
+&lt;p&gt;Now, I will the run the script that I made earlier with some changes. Actually, I learnt later that you can access the rss feeds of a site by using .rss
+I tried wth .xml, but it doesn’t work everytime.&lt;/p&gt;
+&lt;p&gt;Turns out, their xml and rss equivalents don’t have img tags, instead they have a description or content tag with the image details, like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;content&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;html&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt; ... &lt;span class=&#34;ni&#34;&gt;&amp;amp;lt;&lt;/span&gt;span&lt;span class=&#34;ni&#34;&gt;&amp;amp;gt;&amp;amp;lt;&lt;/span&gt;a href=&lt;span class=&#34;ni&#34;&gt;&amp;amp;quot;&lt;/span&gt;https://i.imgur.com/V139kHFds.jpg&lt;span class=&#34;ni&#34;&gt;&amp;amp;quot;&amp;amp;gt;&lt;/span&gt;[link]&lt;span class=&#34;ni&#34;&gt;&amp;amp;lt;&lt;/span&gt;/a&lt;span class=&#34;ni&#34;&gt;&amp;amp;gt;&amp;amp;lt;&lt;/span&gt;/span&lt;span class=&#34;ni&#34;&gt;&amp;amp;gt;&lt;/span&gt; &lt;span class=&#34;ni&#34;&gt;&amp;amp;amp;&lt;/span&gt;#32; &lt;span class=&#34;ni&#34;&gt;&amp;amp;lt;&lt;/span&gt;span&lt;span class=&#34;ni&#34;&gt;&amp;amp;gt;&amp;amp;lt;&lt;/span&gt;a href=&lt;span class=&#34;ni&#34;&gt;&amp;amp;quot;&lt;/span&gt;https://www.reddit.com/r/comics/comments/cm9ludw/&lt;span class=&#34;ni&#34;&gt;&amp;amp;quot;&lt;/span&gt; ... &lt;span class=&#34;nt&#34;&gt;&amp;lt;/content&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This won’t work with my script. The turnoff link is an exception as it has the img tag. (I think these feeds are dependent upon the maintainers of these sites)&lt;/p&gt;
+&lt;p&gt;So, currently my script looks like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Import libraries&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;requests&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;urllib.request&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;time&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;bs4&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#Initial Things to Load each Time&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#Last Link list loaded&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;check_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/home/abhayk/Documents/check.txt&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;check_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;row&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+
+&lt;span class=&#34;c1&#34;&gt;#List to store the last links obtained from each site&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;last_link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#list to store the responses&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;current_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;localtime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;localtime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#--Part 1: The Reddit Script--&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.reddit.com/r/comics/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tries&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#Make multiple requests to busy server &lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ok&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tries&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.reddit.com/r/comics/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;tries&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+    
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Response recieved&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findAll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;external&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;static&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;n_link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;?&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;preview&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;i&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n_link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;check_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;current_time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n_link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;
+        
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Part 1 successful&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;last_link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[::&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#--Part 2 : The Everything Else Script--&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#list of urls&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;url_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://turnoff.us/feed.xml&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;s1&#34;&gt;&amp;#39;http://www.incidentalcomics.com/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://xkcd.com/&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;url_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
+    &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;url_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
+    &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ok&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findAll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;startswith&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;h&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;#Adding https in the start to create a valid link&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;last_link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;check_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;current_time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+            
+
+&lt;span class=&#34;c1&#34;&gt;#--Saving the last links to a file --&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#We will overwrite the file and enter new contents&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/abhayk/Documents/check.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;      
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Checks Updated&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Deleting file content older than 30 days&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;older_than_days&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Check for older images and delete those links&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/abhayk/Documents/response.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;st_size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/abhayk/Documents/response.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;storage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;readlines&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;#print(&amp;#34;Storage:&amp;#34;, storage)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/abhayk/Documents/response.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;    
+        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;storage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;current_time&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;older_than_days&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#\n not added as previously added strings would already contain it&lt;/span&gt;
+            
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Response backlog deleted&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Add the new responses to the file&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/abhayk/Documents/response.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;      
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;#print(&amp;#34;r in response list: &amp;#34;, r)&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        
+&lt;span class=&#34;c1&#34;&gt;#Overwrite the new file with the links now in response_list:&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;insert_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/abhayk/Documents/response.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;st_size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/abhayk/Documents/response.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;      
+        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;insert_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#39;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+
+
+&lt;span class=&#34;n&#34;&gt;insert_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;New response data added&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Add the links to image tags in the html page        &lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/home/abhayk/Documents/index.html&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;page&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;open_tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;lt;head&amp;gt;Meme Page&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;lt;p&amp;gt;Hey! This is a page for some blogs that feature meme content.&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;css_code&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;style&amp;gt; img.resize{&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;max-width:50%;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;max-height:50%;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;/style&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;image_tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;insert_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;image_tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;div&amp;gt;&amp;lt;img style = &amp;#39;max-width:800px;&amp;#39; src = &amp;#39;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#39;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;end_tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;lt;/html&amp;gt;&amp;#34;&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;code&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;open_tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;css_code&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;image_tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;end_tags&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;page&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;    
+
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;HTML updated&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Changes I made are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Added the libraries to the script (I was developing in a Jupyter, so I noticed it later :P)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reversed the response list (old blogs were coming up on top.)&lt;/p&gt;
+&lt;p&gt;NOTE: I later realized that I was web scraping from the reddit page where posts were ordered according to their popularity, so it was bound to change.
+The fix : shift to new sorting instead of the popularity sorting!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.reddit.com/r/comics/new/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added absolute paths to the file instead of relative paths (better safe than sorry :D)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Added os.stat condition so that I don&amp;rsquo;t process an empty file&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;chronic-cron&#34;&gt;Chronic Cron&lt;/h2&gt;
+&lt;p&gt;Now, I had already seen crontab before learning about cloud schedulers, so I was wondering of I could write a cron job within my computer to excute the script.&lt;/p&gt;
+&lt;p&gt;For that, I used crontab in my local computer. The only downside will be that the process will be skipped if my computer is not turned on.
+This is particularly not the case in my vacations but could be possible when my college starts (this was for free time anyways :P)&lt;/p&gt;
+&lt;p&gt;So, first I tried a simple cron job of inserting text in an empty file :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;17&lt;/span&gt; * * * &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;This works&amp;#34;&lt;/span&gt; &amp;gt; /home/abhayk/Documents/img.txt 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And it works :D&lt;/p&gt;
+&lt;p&gt;I checked the syslog in /var/log/syslog and saw this among the lines:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ grep CRON /var/log/syslog
+
+CRON&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1321&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;abhayk&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; CMD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;This works&amp;#34;&lt;/span&gt; &amp;gt; /home/abhayk/Documents/img.txt &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, I had to run a python script in my cron job.&lt;/p&gt;
+&lt;p&gt;First, make sure that your python script is executable.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;chmod +x imagegrab.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I was having some difficulties on how to handle python scripts as most of the examples were on bash scripts.&lt;/p&gt;
+&lt;p&gt;And then I found just the thing, &lt;a href=&#34;https://pypi.org/project/python-crontab/&#34;target=&#34;_blank&#34;&gt;python-crontab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I used this &lt;a href=&#34;https://stackabuse.com/scheduling-jobs-with-python-crontab/&#34;target=&#34;_blank&#34;&gt;blog&lt;/a&gt; to help setup my cron jobs using python-crontab&lt;/p&gt;
+&lt;p&gt;After all this, the only problem left was to make sure that my laptop has an internet connection.
+Not entirely independent till now.&lt;/p&gt;
+&lt;p&gt;But it&amp;rsquo;s an improvement. Atleast my script will run once a day in the morning (mostly without fail :P)&lt;/p&gt;
+&lt;p&gt;(Well the cron job is not working right now, so I will update the blog when I find a fix)&lt;/p&gt;
+&lt;p&gt;And here we are at the end of this blog. (Or are we? XD)&lt;/p&gt;
+&lt;h2 id=&#34;not-content-without-bonus-content&#34;&gt;Not Content Without Bonus Content&lt;/h2&gt;
+&lt;p&gt;Now,I recently learnt to create an onion service in Tor and have added the html file created by script to it.
+So, here’s the &lt;a href=&#34;http://www.4kwzfw7s2nh3viq3.onion/&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt; for the same if you want to see the images (it can only be accessed using tor browser though :P)&lt;/p&gt;
+&lt;p&gt;It may not work always as it is self-hosted (currently), but it can be whatever I want.&lt;/p&gt;
+&lt;p&gt;If you too want to make your own onion service (especially if you have a server lying around :P), you can see this &lt;a href=&#34;https://kushaldas.in/posts/setting-up-authorized-v3-onion-services.html&#34;target=&#34;_blank&#34;&gt;blog&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Git Wizardry</title>
+      <link>/posts/2019-07-24-git-wizardry/</link>
+      <pubDate>Wed, 24 Jul 2019 10:08:57 +0530</pubDate>
+      
+      <guid>/posts/2019-07-24-git-wizardry/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;The following is a monologue I have made to make learning git
+a bit more interesting.&lt;/p&gt;
+&lt;p&gt;Any resemblance to the some other story is purely coincidental.
+None of the git commands have been abused during the making of this post :P&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In case you may get confused:&lt;/p&gt;
+&lt;p&gt;Spells - Files&lt;/p&gt;
+&lt;p&gt;Incantations - Commands&lt;/p&gt;
+&lt;p&gt;Records/Magic Book - Repository&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hello there! I am your teacher at the School of Terminal Wizardry and I will be teaching you Git Magic.
+Terminals are all around us. Terminal Wizards are the ones who have the power to manipulate terminals for their own use.
+Git Magic was derived from the theory of &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control&#34;target=&#34;_blank&#34;&gt;version control&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I will now give you an overview of Git Magic Incantations
+This first incantation is for initiation of git magic in your own magic book.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;When used in the terminal with git installed, this incantation forces it to serve your version control demands by initiating a new magic book.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git init
+Initialized empty Git repository in /home/magic-book/.git/
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And so your journey of git magic manipulation begins. . .&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;When you first create your magic book, it is empty. However, you can add new spells and other magic upon it.&lt;/p&gt;
+&lt;p&gt;Your spellbook is just like any normal book. The pages at the back are treated as rough pages by almost everyone (except those who make an entire notebook as rough XD)&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-repos.png&#34;&gt;&lt;img  src=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-repos.png&#34;
+        alt=&#34;Git Repos&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The engravings are on the fair part of the spell book, which have the correct spells (people call it the local repo).
+While the rough part at the back is where you make small changes or add new stuff (people call it the working directory, as the real work is done there XP).&lt;/p&gt;
+&lt;p&gt;The adding incantation makes the git magic track changes in your spells as well prepare them for engraving by moving them to staging area (a stage between working directory and repository), making your rough side empty (no need of eraser :))&lt;/p&gt;
+&lt;p&gt;Now, copying from rough to fair is a time-consuming (and boring task :P). Git magic does that for you.
+Just use the git commit incantation and all your work tracked by Git (present in staging area) is saved onto the fair side (local repo)&lt;/p&gt;
+&lt;p&gt;You can see which all spells are being modified or are untracked, the commits so far, as well as the current branch, using this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to see the status (of working directory and staging area) of the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;With so much info provided by this incantation, this will be the spell most used by you.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git rm --cached &amp;lt;file&amp;gt;...&amp;#34;&lt;/span&gt; to unstage&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+	new file:   basic-spell.txt
+
+Untracked files:
+  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git add &amp;lt;file&amp;gt;...&amp;#34;&lt;/span&gt; to include in what will be committed&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+	basic-spell-multiple.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can add spells to your book using this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git add &amp;lt;spell-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to add a new magic spell to the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In case you want to add multiple spells to your magic book, you can use this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git add - A&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to add all the magic spells to the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In case you have added a spell by mistake and want to remove it,  you can use this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git rm -r&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to remove added magic spells to the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To engrave these spells onto your magic book, you can use this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git commit -m [“Message Text”]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows the user to commit the magic spells added earlier to the repository&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You also need to add a text along with the commit incantation.
+Written in that text, should be the reasoning behind adding that change or a new spell, so that you remember it when you open your magic book again.
+(there are too many spells to work on these days :P)&lt;/p&gt;
+&lt;p&gt;You should always write good commit messages.Don&amp;rsquo;t know how? Try this &lt;a href=&#34;https://chris.beams.io/posts/git-commit/&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These are all the basic commands. The following command is a powerful one.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone ssh://git@github.com/username/repository-name.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows you to copy someone else’s magic book into your own magic book and make changes within your book&lt;/em&gt;
+(great incantation to have, right? XP)&lt;/p&gt;
+&lt;p&gt;This command is widely used by practicing wizards. Due to this, any terminal wizard can use the cloning spell and work upon the book without starting from scratch.&lt;/p&gt;
+&lt;p&gt;Now, onto the next part. . .&lt;/p&gt;
+&lt;h2 id=&#34;branching-up&#34;&gt;Branching Up&lt;/h2&gt;
+&lt;p&gt;There can be multiple types of magic spells in a magic book.
+However, instead of creating a new magic book for specialized spells of each type, we can use the same one again by a skill called branching.
+Branching is also used when you are experimenting on a spell improvement but don&amp;rsquo;t want the current spell to break (think of it as the last page you use for rough work :P)&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-branching.gif&#34;&gt;&lt;img  src=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-branching.gif&#34;
+        alt=&#34;Branching&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git branch &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This git incantation allows the user to create another branch of the current magic book&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git branch 
+  fire-spell
+  ice-spell
+* master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Want to delete a branch that you made? No problem,use this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git branch -d &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This git incantation allows the user to create another branch of the current magic book&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git branch -d ice-spell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To shift from one branch to another, when working on different spells,use this:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git checkout &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation allows us to switch a branch within the repository.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git checkout fire-spell
+:~/magic-book$ git branch
+* fire-spell
+  master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;git checkout -b &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This git incantation allows us to both create another branch within the repository and switch to it.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git checkout -b ice-spell
+:~/magic-book$ git branch
+  fire-spell
+* ice-spell
+  master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, if you were using it for experimenting on your spell and the change works, then you can add the changes to the book by this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git merge &amp;lt;source-branch&amp;gt; [target-branch]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allows a wizard to merge a the source branch into the target branch.If the target branch is not mentioned, then the branch is merged into the active branch.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;:~/magic-book$ git status
+On branch master
+nothing to commit, working tree clean
+
+:~/magic-book$ git merge fire-spell
+Updating 3515790..043b603
+Fast-forward
+ firespell.txt &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; +-
+ &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; file changed, &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; insertion&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; deletion&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;By this time, I am sure you would have done a lot of work on your spells.&lt;/p&gt;
+&lt;p&gt;Want to share your work? You&amp;rsquo;ll need to create a remote copy of your magic book.
+This remote copy can be made in any Git platform and allows other wizards to copy from this remote magic book using the git clone command we talked about earlier.&lt;/p&gt;
+&lt;p&gt;Next, we will learn more about sharing your magic book.&lt;/p&gt;
+&lt;h2 id=&#34;remote-but-together&#34;&gt;Remote but Together&lt;/h2&gt;
+&lt;p&gt;Remote magic books are very important part for terminal wizards. It allows us to copy other magic books as well as share ours.&lt;/p&gt;
+&lt;p&gt;Often, terminal wizards work together on powerful spells and creating new incantations.
+They create projects within an organization, of which they are members.
+So that they can combine their work, they clone a remote magic book created by them (the organization book) and work on their copy of that magic book, called origin.&lt;/p&gt;
+&lt;p&gt;To create this remote, the follwowing incantation must be invoked:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git remote add &amp;lt;remote-name&amp;gt; &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allow the user to create a remote (called origin by default) to the repository mentioned in the url&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;After working on the spell, they add the updated work in their local magic book back to the remote one. This way others can now copy an updated remote book (amazing, isn&amp;rsquo;t it?)&lt;/p&gt;
+&lt;p&gt;To update the organization book, you need to create another remote made by this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git remote add upstream &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allow the user to create a remote called upstream to the repository mentioned in the url&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-remote.png&#34;&gt;&lt;img  src=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/git-remote.png&#34;
+        alt=&#34;Image&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation pushes the spells present in the master branch(local copy) to origin (remote copy)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git push upstream master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation pushes the spells present in master branch(local copy) to upstream (remote organization book in this case)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say your fellow wizards pushed the code before you and you want to see htier changes then you can use this invocation:
+&lt;code&gt;git pull origin master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation copies/pulls the spells present in the origin (remote copy) into the master branch(local copy)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git push upstream master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This incantation copies/pulls the spells present in upstream (remote organization book in this case) to master branch (local copy)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There is another use of it. You can pull the copy of remote book in case you want to work on your spells and don&amp;rsquo;t have your magic book around.&lt;/p&gt;
+&lt;p&gt;Ancient terminal wizards have always documented their research on spells in their magic books.
+After using the git clone incantation, we can see the whole research process.
+This includes the wizards who contributed as well as the reasoning behind each and every change using this command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git log [--flags]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allows the user to see the changes made by in the magic book with the most recent changes at the top&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;git log is a very powerful command and provides a lot of data.To make it easier for fellow wizards to look for the required data,
+there are many flags which can be added after the git log incantation :&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--summary&lt;/code&gt;
+Allows user to view changes in a detailed manner&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--author &amp;lt;author-name&amp;gt;&lt;/code&gt;
+Allows the user to see the changes made in the magic book by a specific wizard.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--since&lt;/code&gt;
+Allows the user to see the changes made to the magic book since a given time or date-time&lt;/p&gt;
+&lt;p&gt;Now, so that the remote book doesn&amp;rsquo;t get corrupted, each change is submitted as a request which must be accepted by the maker of that book.
+Sometimes the book is maintained by more than one wizard.&lt;/p&gt;
+&lt;p&gt;Now let&amp;rsquo;s say you are the one receiving the request, and you want to see what changes have been made.You can see that using this incantation:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git diff &amp;lt;source branch&amp;gt; &amp;lt;target branch&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Allows the user to preview changes before merging&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;~/magic-book$ git diff fire-spell master
+diff --git a/firespell.txt b/firespell.txt
+index 46e039b..469f750 &lt;span class=&#34;m&#34;&gt;100644&lt;/span&gt;
+--- a/firespell.txt
++++ b/firespell.txt
+@@ -1 +1 @@
+-Flames of Heaven!
++Flame!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;That&amp;rsquo;s it for the overview! (you forgot it was an overview, didn&amp;rsquo;t you? XD)&lt;/p&gt;
+&lt;p&gt;Git Magic is much more vast and has lots of features for very specialized uses.
+Keep learning and aim to be a better terminal wizard.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Scraping Images for Good</title>
+      <link>/posts/2019-07-14-scraping-images-for-good/</link>
+      <pubDate>Sun, 14 Jul 2019 10:08:57 +0530</pubDate>
+      
+      <guid>/posts/2019-07-14-scraping-images-for-good/</guid>
+      <description>&lt;p&gt;So, in #dgplug training, someone shared a blog on &lt;a href=&#34;https://turnoff.us&#34;target=&#34;_blank&#34;&gt;depressed-developers&lt;/a&gt;. After that, we were suggested to try writing a script to retrieve the latest images that were published on the site.&lt;/p&gt;
+&lt;p&gt;I realised after searching for a while that what I wish to do is actually web scraping (web scraping was on my lists of things to learn, as I thought it would be very difficult)&lt;/p&gt;
+&lt;p&gt;I read some more links, got to know about &lt;a href=&#34;https://www.crummy.com/software/BeautifulSoup/bs4/doc/&#34;target=&#34;_blank&#34;&gt;Beautiful Soup&lt;/a&gt; library and then wrote my script using it.The script is something like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;requests&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;urllib.request&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;time&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;bs4&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://turnoff.us/feed.xml&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findAll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;alt&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./turnoff_Images/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;urllib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urlretrieve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;./turnoff_Images/&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;.png&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Latest Image :&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; saved in turnoff_Images folder&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I did take help from this &lt;a href=&#34;https://towardsdatascience.com/how-to-web-scrape-with-python-in-4-minutes-bc49186a8460&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt; though.&lt;/p&gt;
+&lt;p&gt;I was glad of this achievement.I learnt by myself, a thing which I thought was too tough to understand alone.
+Now, this took me around 2 hrs until I posted the link to code on the channel. (yeah I know that’s too much time; I spent 30 mins procrastinating on how to send a proper message on the IRC)&lt;/p&gt;
+&lt;p&gt;Later, I started thinking on how I could make this into a project or hack to make my life easier.
+And then the light bulb moment! I realised that I am lot into memes and art. Instead of scrolling through social media, (which seriously makes time disappear :| ) I decided to look where these memes are made. Turns out, some of the popular ones have a blog of their own.&lt;/p&gt;
+&lt;p&gt;Also, I wanted to check the sub-reddits on comic and unix-setups (ahem ahem, I think you got it XD).&lt;/p&gt;
+&lt;p&gt;So now I got a list of urls that have regular content on their sites. As I don’t need the related text,the RSS reader felt a bit overkill to me.
+I decided to modify my python script and run it to get the new images from all these blogs.&lt;/p&gt;
+&lt;h3 id=&#34;scaling-things-up&#34;&gt;&lt;strong&gt;Scaling Things Up&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Now, each of the blog was different so I studied the source HTML of each blog to see how the image I need can be extracted.&lt;/p&gt;
+&lt;p&gt;Sometimes, required images were not the within the first image tag of the page, as there were other images such as the logo and advertisements.
+The good thing was that the source of these ads and logo had common substrings, which could be used to differentiate to get the required images.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;external&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;static&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Also, sometimes the server was busy and I used to get a response &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429&#34;target=&#34;_blank&#34;&gt;429&lt;/a&gt;.To tackle that, I pinged the server multiple times with some pause(multiple requests without a break can get you flagged by the server, preventing you from getting any more requests through)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.reddit.com/r/comics/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tries&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#Make multiple requests to busy server &lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ok&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tries&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.reddit.com/r/comics/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;tries&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, the only thing left was to make sure that I don’t get duplicate images.For that, I maintained a check.txt which stored the last links that were processed upon in the previous run.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Saving the last links to a file&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#We will overwrite the file and enter new contents&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;./check.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The contents of the file were then loaded and each string when processed, was checked if it was present in the last links. As the most recent images are on the top, so after getting an old image link match, the processing was stopped. This is because all the images below would already have been processed in the previous run.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;n_link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;?&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;preview&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;i&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n_link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;check_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n_link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The response_list that was complete with all the relevant links, was then used to load the images and then store them in the images folder.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Blog-Images&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;listdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./Blog-Images/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;img_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;img_name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;jpg&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;png&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;urllib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urlretrieve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;./Blog-Images/&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So, finally the entire script looked like this.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Initial Things to Load each Time&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;last_link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#Last Link list loaded&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;check_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./check.txt&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;csvFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;reader&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;csv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;csvFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;row&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;reader&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;row&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;check_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;csvFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#list to store the responses&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#--Part 1: The Reddit Script--&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.reddit.com/r/comics/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;tries&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#Make multiple requests to busy server &lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ok&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tries&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.reddit.com/r/comics/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;tries&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+    
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Response recieved&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findAll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;external&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;static&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;n_link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;?&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;preview&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;i&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n_link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;check_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n_link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;
+        
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;last_link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[::&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#--Part 2 : The Everything Else Script--&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#list of urls&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;url_list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://turnoff.us/feed.xml&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;s1&#34;&gt;&amp;#39;http://www.incidentalcomics.com/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://xkcd.com/&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;url_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; 
+    &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ok&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BeautifulSoup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;html.parser&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findAll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;idx&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;startswith&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;h&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;#Adding https in the start to create a valid link&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https:&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;last_link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;check_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            
+
+&lt;span class=&#34;c1&#34;&gt;#--Saving the last links to a file --&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#We will overwrite the file and enter new contents&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;./check.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;##Load the new images to the folder&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Blog-Images&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;listdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mkdir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./Blog-Images/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response_list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;img_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;img_name&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;jpg&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;png&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;urllib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urlretrieve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;link&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;filename&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;./Blog-Images/&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Off to see the new images my script grabs.See you next week!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Making your first blog</title>
+      <link>/posts/2019-07-07-making-your-first-blog/</link>
+      <pubDate>Sun, 07 Jul 2019 10:08:57 +0530</pubDate>
+      
+      <guid>/posts/2019-07-07-making-your-first-blog/</guid>
+      <description>&lt;p&gt;So here is my first blog. It is more of my experience than it is a step by step guide so &lt;strong&gt;do read before pasting the commands in your terminal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Reading and writing are very important and have been a integral part of gaining understanding for a long time.
+The best way to conform and absorb what you have read is to write about it.In these times, writing a blog can be just that.&lt;/p&gt;
+&lt;p&gt;The task of writing your first blog is indeed a difficult thing. Then again, taking the first step for anything worthwhile has always been tough.&lt;/p&gt;
+&lt;p&gt;I am hosting this blog on &lt;a href=&#34;https://pages.github.com/&#34;target=&#34;_blank&#34;&gt;Github Pages&lt;/a&gt;. You can should read this blog if you are new to blogging, may it help you&lt;/p&gt;
+&lt;h3 id=&#34;always-go-step-wise&#34;&gt;&lt;strong&gt;Always go step wise&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;So I was already behind the deadline I had set and was rushing to quickly set up a blog. I decided to use Jekyll for my github page as it is great for generating minimal static pages quickly.
+Also, the &lt;a href=&#34;https://jekyllthemes.io&#34;target=&#34;_blank&#34;&gt;Jekyll themes&lt;/a&gt; are really cool , you should check them out.&lt;/p&gt;
+&lt;p&gt;So, without further ado, I just opened my terminal and entered the first lines that were written on the jekyll homepage, telling I could set up Jekyll in few lines (very tempting indeed)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;~ $ gem install bundler jekyll
+~ $ jekyll new my-awesome-site
+~ $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-awesome-site
+~/my-awesome-site $ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I manipulated some commands, adding a sudo here and there (those were the dark times; used to sudo anytime the terminal said access denied)&lt;/p&gt;
+&lt;p&gt;As you may expect,it didn’t work(I didn’t expect that though :P)
+And then started the not-very-likable task of finding what I did wrong.&lt;/p&gt;
+&lt;h3 id=&#34;not-so-likeable-after-all&#34;&gt;&lt;strong&gt;Not so Likeable After All&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;I explore and see the homepage a bit more, and lo, there was an Installation link.
+I opened it, looked setting up in Linux distros, and realized that I didn’t have any Ruby environment to begin with.
+Jekyll was written in Ruby, know more about it and some other terms &lt;a href=&#34;https://jekyllrb.com/docs/ruby-101/&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The steps are as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt-get install ruby-full build-essential zlib1g-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39; Install Ruby Gems to ~/gems&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export GEM_HOME=&amp;#34;$HOME/gems&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=&amp;#34;$HOME/gems/bin:$PATH&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;somedirectory $ gem install jekyll bundler
+somedirectory $ jekyll new my-blog-name
+somedirectory $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; my-blog-name
+somedirectory/myblog $ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Where somedirectory can be any directory&lt;/p&gt;
+&lt;p&gt;You can know more from the &lt;a href=&#34;https://jekyllrb.com/docs/home&#34;target=&#34;_blank&#34;&gt;Jekyll-docs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Keep in mind that the gem install command above works on the local directory.
+&lt;em&gt;I totally forgot that, as I had previously globally installed gem, which in NOT a good practice.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;And voila, took me more time due to my haste though.&lt;/p&gt;
+&lt;p&gt;Following are some things that may confuse you, make sure you follow them through, especially if you are a Linux user&lt;/p&gt;
+&lt;h3 id=&#34;things-to-watch-out-for&#34;&gt;&lt;strong&gt;Things to Watch out For&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;If you are working on Linux, you will probably see this text when executing jekyll new command :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;The dependency tzinfo-data (&amp;gt;= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run bundle lock --add-platform mingw, mswin, x64_mingw, jruby.&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Basically, the command is not required for Unix-based systems
+The reason for this has been explained &lt;a href=&#34;https://github.com/tzinfo/tzinfo-data/issues/12#issuecomment-279554001&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To correct it , just open the Gemfile and edit it.
+Your Gemfile may look somewhat like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://rubygems.org&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Hello! This is where you manage which Jekyll version is used to run.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# When you want to use a different version, change it below, save the&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#     bundle exec jekyll serve&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# This will help ensure the proper Jekyll version is running.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Happy Jekylling!&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;jekyll&amp;#34;, &amp;#34;~&amp;gt; 3.8.5&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# This is the default theme for new Jekyll sites. You may change this to anything you like.&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;minima&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 2.0&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# If you want to use GitHub Pages, remove the &amp;#34;gem &amp;#34;jekyll&amp;#34;&amp;#34; above and&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# uncomment the line below. To upgrade, run `bundle update github-pages`.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;github-pages&amp;#34;, group: :jekyll_plugins&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# If you have any plugins, put them here!&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;group&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;jekyll-feed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 0.6&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Windows does not include zoneinfo files, so bundle the tzinfo-data gem&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;tzinfo-data&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;platforms&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;:mingw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:mswin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:x64_mingw&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jruby&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Performance-booster for watching directories on Windows&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;wdm&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 0.1.0&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;Gem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;win_platform?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remove or comment out the lines (ingnore if using Windows) like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;tzinfo-data&amp;#34;, platforms: [:mingw, :mswin, :x64_mingw, :jruby]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;wdm&amp;#34;, &amp;#34;~&amp;gt; 0.1.0&amp;#34; if Gem.win_platform?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Also, if you are using Jekyll for Github Pages (which we are), uncomment this line in the Gemfile&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;github-pages&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jekyll_plugins&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After these changes, your file will look something like this.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://rubygems.org&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Hello! This is where you manage which Jekyll version is used to run.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# When you want to use a different version, change it below, save the&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#     bundle exec jekyll serve&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# This will help ensure the proper Jekyll version is running.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Happy Jekylling!&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;jekyll&amp;#34;, &amp;#34;~&amp;gt; 3.8.5&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# This is the default theme for new Jekyll sites. You may change this to anything you like.&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;minima&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 2.0&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# If you want to use GitHub Pages, remove the &amp;#34;gem &amp;#34;jekyll&amp;#34;&amp;#34; above and&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# uncomment the line below. To upgrade, run `bundle update github-pages`.&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;github-pages&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;group&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jekyll_plugins&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# If you have any plugins, put them here!&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;group&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;gem&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;jekyll-feed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~&amp;gt; 0.6&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;end&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Windows does not include zoneinfo files, so bundle the tzinfo-data gem&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;tzinfo-data&amp;#34;, platforms: [:mingw, :mswin, :x64_mingw, :jruby]&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Performance-booster for watching directories on Windows&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#gem &amp;#34;wdm&amp;#34;, &amp;#34;~&amp;gt; 0.1.0&amp;#34; if Gem.win_platform?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Save the changes and execute the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bundle update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All the required things have now been taken care of. Just execute this command and see the magic at &lt;a href=&#34;http://localhost:4000/&#34;target=&#34;_blank&#34;&gt;http:/localhost:4000/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;whats-next&#34;&gt;&lt;strong&gt;What`s Next&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Well now you have set up Jekyll. You can customize it, and add your content. Check out the jekyll themes for your github page.
+And keep blogging!&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
