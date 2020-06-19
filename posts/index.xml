@@ -5,12 +5,78 @@
     <link>/posts/</link>
     <description>Recent content in Posts on A Novice&#39;s Nook</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <copyright>©2020 Notepadium.</copyright>
-    <lastBuildDate>Sat, 17 Aug 2019 13:47:30 +0530</lastBuildDate>
+    <language>en</language>
+    <copyright>©2019 - 2020 Abhay Kaushik</copyright>
+    <lastBuildDate>Fri, 19 Jun 2020 19:14:26 +0530</lastBuildDate>
     
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building GCompris in KDE Neon</title>
+      <link>/posts/building-gcompris/</link>
+      <pubDate>Fri, 19 Jun 2020 19:14:26 +0530</pubDate>
+      
+      <guid>/posts/building-gcompris/</guid>
+      <description>&lt;p&gt;So here is my first blog of the year. I was finally able to start writing again 😁
+This time I will be talking about building GCompris.&lt;/p&gt;
+&lt;h1 id=&#34;why-should-i-build&#34;&gt;Why Should I Build&lt;/h1&gt;
+&lt;p&gt;Well the purpose of build is just to compile, make and install the software. Then why should you make the effort in doing all this work and not just download the installation. The answer for that is yes, you can. However, as a developer who wants to work on that, you shouldn&#39;t 😛&lt;/p&gt;
+&lt;p&gt;The reason behind that is that the installation doesn&#39;t allow you to see the source code working behind the application. It provides you an interface and abstracts away all the details. That is really great for a user but not for a developer that wants to learn more about the software and probably work upon it in the future.&lt;/p&gt;
+&lt;h1 id=&#34;what-is-gcompris&#34;&gt;What is GCompris&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://gcompris.net/&#34;target=&#34;_blank&#34;&gt;GCompris&lt;/a&gt; is an educational suite with more than 120 activities aimed at children in the ages 2-10. GCompris was originally written in C and Python using the GTK+ widget toolkit, but a rewrite in C++ and QML using the Qt widget toolkit is since early 2014 in process. With the rewrite almost complete, the focus is now to add options to add difficulty levels for each activity to improve the options a kid has while selecting an activity. GCompris is currently a part of KDE.&lt;/p&gt;
+&lt;h1 id=&#34;building-gcompris&#34;&gt;Building GCompris&lt;/h1&gt;
+&lt;p&gt;And finally the section for which you were reading the blog 😊
+The instructions to build GCompris are present in the MediaWiki pages maintained by GCompris. As GCompris is cross-platform, you can build GCompris in Linux, Mac, Windows, Android and even Rasberry Pi. The instructions to build from source are present &lt;a href=&#34;https://gcompris.net/wiki/Qt_Quick_development_process&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am currently building GCompris on Linux, KDE Neon 8.15.2 User Edition to be precise. I was earlier using Ubuntu 18.04 and recently shifted to KDE Neon. If you want to work upon and contribute to KDE Applications, I would suggest using KDE Neon or KDE Plasma. As I was not using a bleeding edge software, so I didn&amp;rsquo;t opt for KDE Developer Edition, which has more bugs but more recent packages.&lt;/p&gt;
+&lt;p&gt;Well unfortunately, I did not stumble on the same link as I have pointed earlier (bad searching skiils 😛) I found this &lt;a href=&#34;https://techbase.kde.org/Development/Tutorials/Setting_Up&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt; first. The blog is in case you reach the first link.
+Don&#39;t worry. It&#39;s not that the build doesn&#39;t work, just some errors that crop up due to lack of some packages. This is my account of how I dealt with them.&lt;/p&gt;
+&lt;p&gt;(The errors may not be exactly what I found, as I did not record them and have forgotten the exact text. I tried to salvage what I could from my recent search history 😛)&lt;/p&gt;
+&lt;p&gt;After cloning the project, opening it in Qt Creator and running it, I was not able to build the first time due to the following error:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;CMake Error at CMakeLists.txt:22 (find_package):
+  By not providing &amp;quot;FindQt5LinguistTools.cmake&amp;quot; in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  &amp;quot;Qt5LinguistTools&amp;quot;, but CMake did not find one.
+
+  Could not find a package configuration file provided by &amp;quot;Qt5LinguistTools&amp;quot;
+  with any of the following names:
+
+    Qt5LinguistToolsConfig.cmake
+    qt5linguisttools-config.cmake
+
+  Add the installation prefix of &amp;quot;Qt5LinguistTools&amp;quot; to CMAKE_PREFIX_PATH or
+  set &amp;quot;Qt5LinguistTools_DIR&amp;quot; to a directory containing one of the above
+  files.  If &amp;quot;Qt5LinguistTools&amp;quot; provides a separate development package or
+  SDK, be sure it has been installed.
+
+
+-- Configuring incomplete, errors occurred!
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For resolving this error, I found ths &lt;a href=&#34;https://github.com/nitroshare/nitroshare-desktop/issues/208&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install qttools5-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And I was able to build the activity after that. I had not seen any screenshots of the activity, so I was taken by surprise when I saw it 😁 The format and overall look was reminiscent of the educational games I had played as a kid&lt;/p&gt;
+&lt;p&gt;&lt;a target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; 
+  href=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/gcompris_welcome.png&#34;&gt;&lt;img  src=&#34;https://raw.githubusercontent.com/AbhayKaushik/AbhayKaushik.github.io/master/images/gcompris_welcome.png&#34;
+        alt=&#34;Welcome Screen&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For the new contributors exercise, I ran the script mentioned in the program and opened it in QtCreator.
+I then got the &lt;code&gt;unknown cmake command &amp;quot;gcompris_add_rcc&amp;quot; &lt;/code&gt;error, turns out I was trying to build from the CMakeLists.txt file of the template activity. So, just building the entire project and checking the activity seems like the way to go.&lt;/p&gt;
+&lt;p&gt;Now the project was functional but I was not able to invoke on any activity by clicking on it. Checking the debugging section, I found that I had the following error there:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;error: module &amp;quot;QtQuick.Particles&amp;quot; is not installed
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I just search the same error and got &lt;a href=&#34;https://ubuntu.pkgs.org/16.04/ubuntu-main-i386/qml-module-qtquick-particles2_5.5.1-2ubuntu6_i386.deb.html&#34;target=&#34;_blank&#34;&gt;this&lt;/a&gt; as a second link from my search result. This helped me find the package name so that I could install the same on my system. As I wanted to install it throughout the system for all users, I did the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo apt install qml-module-qtquick-particles2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And then the games started working, along with really cool particle effects 😊&lt;/p&gt;
+&lt;p&gt;Some games require packages specific to them. For example, I was unable to play the balance box game. The debugging section showed that there was some error due to QtSensor&lt;/p&gt;
+&lt;p&gt;The solution to this was install the required package:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ sudo apt install libqt5sensors5-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I also had another error. The debugging section showed:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;autosink error
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I found a &lt;a href=&#34;https://forum.qt.io/topic/65306/error-the-stream-is-in-the-wrong-format/4&#34;target=&#34;_blank&#34;&gt;link&lt;/a&gt;,
+but it didn&#39;t help me 😛.
+Later it turned out that the name of the package had changed, which I found about from &lt;a href=&#34;https://unix.stackexchange.com/questions/389760/what-happened-to-gstreamer-ffmpeg-and-can-i-replace-it&#34;target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu Package Search turned out to be super helpful in resolving these issues.&lt;/p&gt;
+&lt;p&gt;Though I couldn&#39;t resolve the autosink error, the software works great. I can play the games, change settings etc.
+Do try building GCompris yourself! 😊&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Creating a Pull Request</title>
