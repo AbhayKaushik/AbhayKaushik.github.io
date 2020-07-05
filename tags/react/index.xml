@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>React on A Novice&#39;s Nook</title>
+    <link>/tags/react/</link>
+    <description>Recent content in React on A Novice&#39;s Nook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©2019 - 2020 Abhay Kaushik</copyright>
+    <lastBuildDate>Mon, 06 Jul 2020 00:40:21 +0530</lastBuildDate>
+    
+        <atom:link href="/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing NodeJS binaries in KDE Neon</title>
+      <link>/posts/npm-install/</link>
+      <pubDate>Mon, 06 Jul 2020 00:40:21 +0530</pubDate>
+      
+      <guid>/posts/npm-install/</guid>
+      <description>&lt;p&gt;So, I was learning React and decided to install NodeJS for setting up a local dev environment. The official downloads page pointed me to the binaries for Linux.
+Now I have worked with binaries and tarballs, but I forgot what&amp;rsquo;s needed to be done after extraction 😂&lt;/p&gt;
+&lt;p&gt;I tried to find an easy solution by looking up links to download from repositories using PPA&lt;/p&gt;
+&lt;p&gt;Turns out, Nodejs and npm can be installed directly. However, I was facing an error when I ran the usual &lt;code&gt;sudo apt install&lt;/code&gt; command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) libkf5kdelibs4support-dev:amd64 &amp;lt; 5.70.0-0xneon+18.04+bionic+build58 @ii mK Ib &amp;gt;
+Broken libkf5kdelibs4support-dev:amd64 Depends on libssl-dev:amd64 &amp;lt; 1.1.1-1ubuntu2.1~18.04.6 @ii mR &amp;gt;
+  Considering libssl-dev:amd64 0 as a solution to libkf5kdelibs4support-dev:amd64 19
+  Added libssl-dev:amd64 to the remove list
+  Fixing libkf5kdelibs4support-dev:amd64 via keep of libssl-dev:amd64
+Investigating (0) libssl1.0-dev:amd64 &amp;lt; none -&amp;gt; 1.0.2n-1ubuntu5.3 @un uN Ib &amp;gt;
+Broken libssl1.0-dev:amd64 Conflicts on libssl-dev:amd64 &amp;lt; 1.1.1-1ubuntu2.1~18.04.6 @ii mK Ib &amp;gt;
+  Considering libssl-dev:amd64 0 as a solution to libssl1.0-dev:amd64 0
+  Holding Back libssl1.0-dev:amd64 rather than change libssl-dev:amd64
+Investigating (0) nodejs-dev:amd64 &amp;lt; none -&amp;gt; 8.10.0~dfsg-2ubuntu0.4 @un uN Ib &amp;gt;
+Broken nodejs-dev:amd64 Depends on libssl1.0-dev:amd64 &amp;lt; none | 1.0.2n-1ubuntu5.3 @un uH &amp;gt; (&amp;gt;= 1.0.2)
+  Considering libssl1.0-dev:amd64 0 as a solution to nodejs-dev:amd64 -1
+  Holding Back nodejs-dev:amd64 rather than change libssl1.0-dev:amd64
+Investigating (0) node-gyp:amd64 &amp;lt; none -&amp;gt; 3.6.2-1ubuntu1 @un uN Ib &amp;gt;
+Broken node-gyp:amd64 Depends on nodejs-dev:amd64 &amp;lt; none | 8.10.0~dfsg-2ubuntu0.4 @un uH &amp;gt;
+  Considering nodejs-dev:amd64 -1 as a solution to node-gyp:amd64 -1
+  Holding Back node-gyp:amd64 rather than change nodejs-dev:amd64
+Investigating (1) npm:amd64 &amp;lt; none -&amp;gt; 3.5.2-0ubuntu4 @un puN Ib &amp;gt;
+Broken npm:amd64 Depends on node-gyp:amd64 &amp;lt; none | 3.6.2-1ubuntu1 @un uH &amp;gt; (&amp;gt;= 0.10.9)
+  Considering node-gyp:amd64 -1 as a solution to npm:amd64 9998
+  Re-Instated libssl1.0-dev:amd64
+  Re-Instated nodejs-dev:amd64
+  Re-Instated node-gyp:amd64
+Investigating (1) libssl1.0-dev:amd64 &amp;lt; none -&amp;gt; 1.0.2n-1ubuntu5.3 @un uN Ib &amp;gt;
+Broken libssl1.0-dev:amd64 Conflicts on libssl-dev:amd64 &amp;lt; 1.1.1-1ubuntu2.1~18.04.6 @ii mK Ib &amp;gt;
+  Considering libssl-dev:amd64 0 as a solution to libssl1.0-dev:amd64 0
+  Holding Back libssl1.0-dev:amd64 rather than change libssl-dev:amd64
+Investigating (1) nodejs-dev:amd64 &amp;lt; none -&amp;gt; 8.10.0~dfsg-2ubuntu0.4 @un uN Ib &amp;gt;
+Broken nodejs-dev:amd64 Depends on libssl1.0-dev:amd64 &amp;lt; none | 1.0.2n-1ubuntu5.3 @un uH &amp;gt; (&amp;gt;= 1.0.2)
+  Considering libssl1.0-dev:amd64 0 as a solution to nodejs-dev:amd64 -1
+  Holding Back nodejs-dev:amd64 rather than change libssl1.0-dev:amd64
+Investigating (1) node-gyp:amd64 &amp;lt; none -&amp;gt; 3.6.2-1ubuntu1 @un uN Ib &amp;gt;
+Broken node-gyp:amd64 Depends on nodejs-dev:amd64 &amp;lt; none | 8.10.0~dfsg-2ubuntu0.4 @un uH &amp;gt;
+  Considering nodejs-dev:amd64 -1 as a solution to node-gyp:amd64 -1
+  Holding Back node-gyp:amd64 rather than change nodejs-dev:amd64
+Investigating (2) npm:amd64 &amp;lt; none -&amp;gt; 3.5.2-0ubuntu4 @un puN Ib &amp;gt;
+Broken npm:amd64 Depends on node-gyp:amd64 &amp;lt; none | 3.6.2-1ubuntu1 @un uH &amp;gt; (&amp;gt;= 0.10.9)
+  Considering node-gyp:amd64 -1 as a solution to npm:amd64 9998
+Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ npm : Depends: node-gyp (&amp;gt;= 0.10.9) but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A long message indeed. What I understood from this, was that it might have something to do with what I did on my other OS. I have an Ubuntu as one of the OS in my triple boot laptop (the third one? Windows of course 😛) and I remember uninstalling &lt;code&gt;libssl&lt;/code&gt; files during an &lt;code&gt;apt remove&lt;/code&gt; command recently. It is possible that it may have caused the problem&lt;/p&gt;
+&lt;p&gt;TLDR; I cannot install npm and NodeJS (node is another package in the repository package list, Amateur Packet Radio Node program but this was from an old StackOverflow answer 😛) via the apt install command and I am stuck with the binaries.&lt;/p&gt;
+&lt;p&gt;I knew that I had to extract from the tar file to get the required packages, but not sure where to put it.&lt;/p&gt;
+&lt;p&gt;This &lt;a href=&#34;https://www.thegeekstuff.com/2015/10/install-nodejs-npm-linux/&#34;target=&#34;_blank&#34;&gt;blog&lt;/a&gt; was the one which I found suitable for my requirements.&lt;/p&gt;
+&lt;p&gt;Although I could not understand all the commands properly (saw the strip-components argument for the first time), I knew what path I need to add the binaries to.&lt;/p&gt;
+&lt;p&gt;I then extracted the package and renamed the file&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~$ tar -xvf node-v12.18.0-linux-x64.tar.xz
+~$ mv node-v12.18.0-linux-x64 ./node
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Moved the file to /usr/local/bin&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~$ sudo mv node /usr/local/bin/
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Updated the .bashrc file by appending the following text at the end&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#NodeJS 
+export NODEJS_HOME=/usr/local/bin/node
+export PATH=$NODEJS_HOME/bin:$PATH
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is a neat way I found to add path. The benefit is that I can update the NODEJS_HOME variable and the second part remains the same (which would otherwise require probing the directory structure to write the entire updated path again)&lt;/p&gt;
+&lt;p&gt;Run the source command and run the command with the &amp;ndash;version argument to see if they are in the PATH&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~$ source .bashrc
+
+~$ node --version
+v12.18.0
+~$ npm --version
+6.14.4
+~$ npx --version
+6.14.4
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And with this I have (almost 😊) prepared my React dev setup. See you in the next post! 😁&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
