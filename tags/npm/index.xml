@@ -19,7 +19,7 @@
       
       <guid>/posts/npm-install/</guid>
       <description>&lt;p&gt;So, I was learning React and decided to install NodeJS for setting up a local dev environment. The official downloads page pointed me to the binaries for Linux.
-Now I have worked with binaries and tarballs, but I forgot what&amp;rsquo;s needed to be done after extraction 😂&lt;/p&gt;
+Now I have worked with binaries and tarballs, but I forgot what&#39;s needed to be done after extraction 😂&lt;/p&gt;
 &lt;p&gt;I tried to find an easy solution by looking up links to download from repositories using PPA&lt;/p&gt;
 &lt;p&gt;Turns out, Nodejs and npm can be installed directly. However, I was facing an error when I ran the usual &lt;code&gt;sudo apt install&lt;/code&gt; command:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Reading package lists... Done
@@ -89,8 +89,8 @@ E: Unable to correct problems, you have held broken packages.
 &lt;pre&gt;&lt;code&gt;#NodeJS 
 export NODEJS_HOME=/usr/local/bin/node
 export PATH=$NODEJS_HOME/bin:$PATH
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is a neat way I found to add path. The benefit is that I can update the NODEJS_HOME variable and the second part remains the same (which would otherwise require probing the directory structure to write the entire updated path again)&lt;/p&gt;
-&lt;p&gt;Run the source command and run the command with the &amp;ndash;version argument to see if they are in the PATH&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is a neat way I found to add path. The benefit is that I can update the &lt;code&gt;NODEJS_HOME&lt;/code&gt; variable and the second part remains the same (which would otherwise require probing the directory structure to write the entire updated path again)&lt;/p&gt;
+&lt;p&gt;Run the source command and run the command with the --version argument to see if they are in the PATH&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;~$ source .bashrc
 
 ~$ node --version
@@ -100,7 +100,7 @@ v12.18.0
 ~$ npx --version
 6.14.4
 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And with this I have (almost 😊) prepared my React dev setup. See you in the next post! 😁&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And with this I have (almost) prepared my React dev setup. See you in the next post! 😁&lt;/p&gt;</description>
       
     </item>
     
