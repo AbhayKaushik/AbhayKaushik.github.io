@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.68.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Learning about Software Coding Practices&nbsp;&ndash;&nbsp;A Novice&#39;s Nook</title><link rel="stylesheet" href="/css/core.min.851f5181448e7e5e2219717b346282751186a92327b3dda2d30c3d7116596593cc943005e2ba64b04182b458c20b9e04.css" integrity="sha384-hR9RgUSOfl4iGXF7NGKCdRGGqSMns92i0ww9cRZZZZPMlDAF4rpksEGCtFjCC54E"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">A Novice's Nook</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">My experiences with learning new things</span></div></section>
+<div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Learning about Software Coding Practices</h1><p class="article date">Tuesday, July 28, 2020</p></section><article class="article markdown-body"><p>So, this post is for mentioning the new things that I learned about coding principles in general in the Udacity's AWS Machine Learning Foundations Course.</p>
+<h2 id="software-coding-practices">Software Coding Practices</h2>
+<p>These are practices that help you write clean, efficient, well-tested code. The different aspects that I learn about these practices are written below</p>
+<ul>
+<li>Write clean and modular code</li>
+<li>Improve code efficiency</li>
+<li>Add effective documentation</li>
+<li>Use version control</li>
+<li>Testing</li>
+<li>Logging</li>
+<li>Code Reviews</li>
+</ul>
+<h2 id="writing-clean-and-modular-code">Writing Clean and Modular Code</h2>
+<p>Clean and modular code divides a large program into small parts that make it easier to code as well as to understand and debug.</p>
+<p>Learnt that we should avoid adding redundant comments by using descriptive variable names, avoid abbreviations and single letters, avoiding long names in order to create descriptive names (only relevent information should be conveyed via the name).</p>
+<p>There were various points regarding creation of modular code. Learnt about Don't Repeat Yourself principle. What it means that if you are repeating the code that you had written earlier are, then there are chances that you can better refactor your code and use modularization to reuse code.
+Also, keeping checks that the function is only doing one thing and isn't taking lots of arguments ensures that you don't code a complicated function. We should also abstract out logic to ensure code readability while ensuring that we don't over-engineer the code.</p>
+<p><a href="https://www.python.org/dev/peps/pep-0008/"target="_blank">PEP 8 Style Guide</a> is a great guide on how you should write properly formatted code that is easier to read.</p>
+<h2 id="code-optimization">Code Optimization</h2>
+<p>Learnt about how making small changes can change the time taken to process large amount of data and how some functions can be better than other depending on specific use cases, such as using vector operations over loops when possible (using numpy&rsquo;s intersect1d method to find intersecting points of two arrays) .
+Also, knowing data structures and which methods are faster, (using the set&rsquo;s intersection method to get the common elements in two arrays) can help optimize code.</p>
+<p>Also learnt how refactor code can improve its efficiency,such as selecting <a href="https://thispointer.com/python-numpy-select-elements-or-indices-by-conditions-from-numpy-array/"target="_blank">numpy array indices based on conditions</a> is faster than looping through the array to select certain elements and then find their sum.</p>
+<h2 id="documentation">Documentation</h2>
+<p>Writing documentation is also an important part of software development. Documentation can be divided into 3 levels: inline, function-level, project-level, each with its own purpose.</p>
+<ul>
+<li>
+<p>Inline documentation should be written in order to explain parts that are not self-explanatory. Learnt how this documentation needs to strike a balance and should used when refactoring code is not ehough. An example can be using a non-conventional method to prevent a bug that has crept in due to external conditions.</p>
+</li>
+<li>
+<p>Function level documentation, or docstrings, should be written in order to explain what a function is doing. Learnt how this documentation should be present in every function and involves a single line description along with what arguments it takes and what the fucntion returns. In case the function is complicated enough, a paragraph explaining the function can be added after the single line description.</p>
+</li>
+<li>
+<p>Project documentation is the documentation that we write in the README files 😊. Learnt how this documentation should be able to tell what the code is about, list the dependencies as well as the instructions to use it. The course then mentions some READMEs of popular projects - Bootstrap, Scikit-Learn, StackOverflow Blog</p>
+</li>
+</ul>
+<h2 id="version-control">Version Control</h2>
+<p>The course gave a bit of a refresher for the git version control and links that explain about <a href="https://nvie.com/posts/a-successful-git-branching-model/"target="_blank">git branching</a> and handling <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-merge-conflicts"target="_blank">merge conflicts</a></p>
+<p>What I learnt new was that how model versioning could help in data science by adding the score of that model within each commit. This helps keep track of model versions and saves the effort of tracking the different hyperparameters, amounts of data, seeds etc. Here is a <a href="https://algorithmia.com/blog/how-to-version-control-your-production-machine-learning-models"target="_blank">link</a> to the blog shared in the course that talks about data version control.</p>
+<h2 id="testing-and-test-driven-development">Testing and Test-Driven Development</h2>
+<p>I was aware of the concept of incorporating testing while writing code for software development but not in the perspective of data science.</p>
+<blockquote>
+<p>Problems in Data Science can include wrong encoding, features being used inappropriately as well as data breaking assumptions within our model.</p>
+</blockquote>
+<p>Here is a <a href="https://www.predictiveanalyticsworld.com/machinelearningtimes/four-ways-data-science-goes-wrong-and-how-test-driven-data-analysis-can-help/6947/"target="_blank">link</a> regarding testing in data science. Data-breaking assumptions can become a very real problem especially when the development spans across many days and assumptions are not properly documented.</p>
+<p><a href="https://www.youtube.com/watch?v=FxSsnHeWQBY"target="_blank">Unit Testing</a> and <a href="https://www.fullstackpython.com/integration-testing.html"target="_blank">Integration Testing</a> are the most common types of testing [check if there are other types of testing]</p>
+<blockquote>
+<p>Unit Tests are test that cover a unit of code, usually a single function, idependently from the rest of the program.</p>
+</blockquote>
+<p>The advantage is that they are isolated from the rest of the  program so no dependencies are involved.
+However, they don't ensure that a program will run successfully as they don't require access to databases, APIs, or other external sources of information.
+To show that parts of the program are working as intended, we use integration testing.</p>
+<p>Learnt about test driven development which is a development process where you write tests for tasks that you plan to code and implement. Was introduced to the pytest which is a tool to evaluate test cases. Unit test functions can be defined in a file starting with <code>test_</code>(can be changed in configuration). The pytest tool then looks for this file and gives and only outputs to show what test functions failed. It was thus recommended to only have one assert statement per test. The test doesn't stop due to
+failed assert statements but may fail due to syntax errors.</p>
+<h2 id="logging">Logging</h2>
+<blockquote>
+<p>Logging helps understand the events that occured while runnning the program. It is the process of recording messages to describe the events that have occurred.</p>
+</blockquote>
+<p>While most of my logging consisted of printing random statements in order to find what part of my code doesn't work properly 😛 , in most of the data science libraries, you will often find events that have been completed mentioned in the logs, as well as showing the progress when training models.</p>
+<p>I learnt about how logging has 3 levels, DEBUG for any event that happens in the program, ERROR for recording any errors that occur and INFO to record user-driven or system-specific actions. Creating clear, concise and professional logs is a good practice.</p>
+<h2 id="code-reviews">Code Reviews</h2>
+<p>Got to know about code reviews. Code reviews are conducted to to improve the code written by catching errors, ensuring code readability, sharing knowledge and making sure that the code conforms to the styling guide anf best practices are being followed. Using a linter, writing objective comments, providing code example and explaining issues and giving suggestions can help ensuring a better and smoother code review.</p>
+<p>Some questions you can ask to review the code by yourself (improving it further before the group review 😊):</p>
+<ul>
+<li>Is the code clean and modular?</li>
+<li>Is the code efficient?</li>
+<li>Is documentation effective?</li>
+<li>Is the code well tested?</li>
+<li>Is the logging effective?</li>
+</ul>
+<p>I got to know about how each organization has its own coding style and how we can use a code linter to ensure that we write clean code. Although not mentioned in the blog, I found a code formatter by the name <a href="https://black.readthedocs.io/en/stable/"target="_blank">Black</a> that format codes. Its currently in beta, do check it out.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I learnt about a different side of software engineering, apart from LOC, Software Development cycles. This was a more hands-on, practical side to it. I'll talk about more things that I learn in another blog. See you in the next post! 😁</p></article><section class="article labels"><a class="category" href=/categories/course-highlights/>Course Highlights</a><a class="category" href=/categories/data-science/>Data Science</a><a class="tag" href=/tags/python/>python</a></section></div><section class="article navigation"><p><a class="link" href="/posts/npm-install/"><span class="li">&rarr;</span>Installing NodeJS binaries in KDE Neon</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2019 - 2020 Abhay Kaushik</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section></div>
+</body>
+
+</html>
